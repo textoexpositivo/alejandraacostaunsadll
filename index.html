@@ -11,27 +11,50 @@
 </head>
 
 <body>
-    <div id="content">
-        <div class="tab">
-            <h1 class="subTit">Ruleta</h1>
-        </div>
-        <div>
-            <canvas id="canvas" height="400" width="400"></canvas>
-            <input class="girar" type="button" value="Girar" onclick="miRuleta.startAnimation()" />
 
-        </div>
+    <div class="tab">
+        <h1 class="subTit">Ruleta</h1>
+    </div>
+    <div>
+        <canvas id="canvas" height="400" width="400"></canvas>
+        <input class="girar" type="button" value="Girar" onclick="miRuleta.startAnimation()" />
+        <!--  -->
+    </div>
 
-        <div class="pre">
-            <h1 class="subTit">Presentaición</h1>
-            <!-- <iframe
-                src="https://docs.google.com/presentation/d/e/2PACX-1vTFqfTYM8UzS0zUlX_xXNKylhLOiy0mtTZ9ZpX3smIpSrARKgiQrHmm1kyzbJRwCA/embed?start=false&loop=false&delayms=1000"
-                frameborder="0" width="400" height="240" allowfullscreen="true" mozallowfullscreen="true"
-                webkitallowfullscreen="true">
-            </iframe> -->
+    <div class="pre">
+        <h1 class="subTit">Presentaición</h1>
+        <iframe
+            src="https://docs.google.com/presentation/d/e/2PACX-1vTFqfTYM8UzS0zUlX_xXNKylhLOiy0mtTZ9ZpX3smIpSrARKgiQrHmm1kyzbJRwCA/embed?start=false&loop=false&delayms=1000"
+            frameborder="0" width="400" height="240" allowfullscreen="true" mozallowfullscreen="true"
+            webkitallowfullscreen="true">
+        </iframe>
 
-            <iframe src="https://onedrive.live.com/embed?cid=2B06DD62D29209B9&amp;resid=2B06DD62D29209B9%21594&amp;authkey=AOPIDNBJ-EyNMG8&amp;em=2&amp;wdAr=1.7777777777777777" width="400px" height="240px" frameborder="0">Esto es un documento de <a target="_blank" href="https://office.com">Microsoft Office</a> incrustado con tecnología de <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+        <!-- <iframe
+        src="https://onedrive.live.com/embed?cid=2B06DD62D29209B9&amp;resid=2B06DD62D29209B9%21594&amp;authkey=AOPIDNBJ-EyNMG8&amp;em=2&amp;wdAr=1.7777777777777777"
+        width="400px" height="240px" frameborder="0">Esto es un documento de <a target="_blank"
+            href="https://office.com">Microsoft Office</a> incrustado con tecnología de <a target="_blank"
+            href="https://office.com/webapps">Office</a>.</iframe> -->
 
-        </div>
+    </div>
+
+    <div>
+        <h1 class="subTit">Rompecabezas</h1>
+
+
+        <svg width="600" height="600" id="entorno">
+		<g id="fondo"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master//pikachu.png" width="400" height="400" x="200" y="100"></g>
+	<g class="padre" id="0"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/1.png" class="movil"></g>
+	<g class="padre" id="1"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/2.png" class="movil"></g>
+	<g class="padre" id="2"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/3.png" class="movil"></g>
+	<g class="padre" id="3"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/4.png" class="movil"></g>
+	<g class="padre" id="4"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/5.png" class="movil"></g>
+	<g class="padre" id="5"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/6.png" class="movil"></g>
+	<g class="padre" id="6"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/7.png" class="movil"></g>
+	<g class="padre" id="7"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/8.png" class="movil"></g>
+	<g class="padre" id="8"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/9.png" class="movil"></g>
+</svg>
+<audio id="win" src="https://raw.githubusercontent.com/NestorPlasencia/PikaPuzzle/master/media/win.mp3"></audio>
+	
     </div>
 </body>
 <script src="app.js"></script>

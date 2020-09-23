@@ -2,16 +2,19 @@
     box-sizing: border-box;
 }
 
-/* body{
+body {
     height: 100%;
+    margin: 0;
     padding: 0;
-    margin: 0;  
+    background-color: #eedfa5;
 }
 
-#content
+/* #content
 {
     height: 100%;
-    background: red;
+    margin: 0;
+    padding: 0;
+    background-color: #FFCC00;
 } */
 
 html, body, div{
@@ -37,10 +40,25 @@ iframe, .girar{
     text-align: center;
     align-content: center;
     justify-self: center;
-    background: red;
+    background: rgb(57, 103, 177);
     color: white;
 }
 
-.tab{
-    width: auto;
+
+
+
+
+
+/* ***************************************** */
+
+/* ROMPECABEZAS */
+
+
+#entorno{
+    display: block;
+    margin: 0 auto;
+}
+
+#fondo{
+    opacity: 0.3;
 }
