@@ -34,9 +34,13 @@ iframe, .girar{
 
 
 .subTit{
+    text-align: center;
     align-content: center;
     justify-self: center;
     background: red;
     color: white;
-    text-align: center;
+}
+
+.tab{
+    width: auto;
 }
