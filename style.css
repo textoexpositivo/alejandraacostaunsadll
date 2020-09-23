@@ -1,5 +1,42 @@
-#canvas, iframe{
+*{
+    box-sizing: border-box;
+}
+
+/* body{
+    height: 100%;
+    padding: 0;
+    margin: 0;  
+}
+
+#content
+{
+    height: 100%;
+    background: red;
+} */
+
+html, body, div{
+    width: 100%;
+}
+
+
+#canvas{
+    display: flex;
+    margin: auto;
+    
+    /* height: 100%; */
+}
+
+iframe, .girar{
     display: flex;
     margin: auto;
     /* left: 50%; */
+}
+
+
+.subTit{
+    align-content: center;
+    justify-self: center;
+    background: red;
+    color: white;
+    text-align: center;
 }
