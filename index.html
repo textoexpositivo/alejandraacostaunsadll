@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="TweenMax.min.js"></script>
     <script src="Winwheel.min.js"></script>
 </head>
@@ -39,25 +39,66 @@
 
     <div>
         <h1 class="subTit">Rompecabezas</h1>
-
-
         <svg width="600" height="600" id="entorno">
 		<g id="fondo"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master//pikachu.png" width="400" height="400" x="200" y="100"></g>
-	<g class="padre" id="0"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/1.png" class="movil"></g>
-	<g class="padre" id="1"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/2.png" class="movil"></g>
-	<g class="padre" id="2"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/3.png" class="movil"></g>
-	<g class="padre" id="3"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/4.png" class="movil"></g>
-	<g class="padre" id="4"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/5.png" class="movil"></g>
-	<g class="padre" id="5"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/6.png" class="movil"></g>
-	<g class="padre" id="6"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/7.png" class="movil"></g>
-	<g class="padre" id="7"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/8.png" class="movil"></g>
-	<g class="padre" id="8"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/9.png" class="movil"></g>
-</svg>
-<audio id="win" src="https://raw.githubusercontent.com/NestorPlasencia/PikaPuzzle/master/media/win.mp3"></audio>
-	
+        <g class="padre" id="0"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/1.png" class="movil"></g>
+        <g class="padre" id="1"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/2.png" class="movil"></g>
+        <g class="padre" id="2"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/3.png" class="movil"></g>
+        <g class="padre" id="3"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/4.png" class="movil"></g>
+        <g class="padre" id="4"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/5.png" class="movil"></g>
+        <g class="padre" id="5"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/6.png" class="movil"></g>
+        <g class="padre" id="6"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/7.png" class="movil"></g>
+        <g class="padre" id="7"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/8.png" class="movil"></g>
+        <g class="padre" id="8"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/9.png" class="movil"></g>
+        </svg>
+        <audio id="win" src="https://raw.githubusercontent.com/NestorPlasencia/PikaPuzzle/master/media/win.mp3"></audio>
     </div>
+
+
+    <!-- <div class="empty">
+        <div class="fill" draggable="true"> </div>
+    </div>
+
+    <div class="empty">
+    </div>
+
+    <div class="empty">
+    </div>
+
+    <div class="empty">
+    </div>
+
+    <div class="empty">
+    </div> -->
+
+    <div class="container">
+        <p class="draggable" draggable="true">1</p>
+        <p class="draggable" draggable="true">2</p>
+    </div>
+    <div class="container">
+        <p class="draggable" draggable="true">3</p>
+        <p class="draggable" draggable="true">4</p>
+    </div>
+
+    <span style="display:inline-block;margin:1em;width:160px;text-align:center">
+        <a
+            href="https://www.jigsawplanet.com/?rc=play&amp;pid=24830b65e6cc"
+            style="display:inline-block;position:relative"><img alt="preview"
+                style="display:block;box-shadow:2px 2px 4px rgba(0,0,0,.4)"
+                src="https://im.jigsawplanet.com/?rc=img&amp;pid=24830b65e6cc&amp;size=160"><span
+                style="position:absolute;right:4px;bottom:4px;font:bold 120% Verdana,sans-serif;white-space:nowrap;filter:drop-shadow(1px 1px 2px #000)"><span
+                    style="color:#fff;vertical-align:middle">8</span><img
+                    style="width:1.5em;height:1.5em;vertical-align:middle"
+                    src="https://www.jigsawplanet.com/img/shapes/10.svg" alt="piece"></span></a><a
+            style="display:block;margin-top:.2em;overflow-wrap:break-word"
+            href="https://www.jigsawplanet.com/?rc=play&amp;pid=24830b65e6cc">Cycles</a>
+    </span>
+    <span style="display:inline-block;margin:1em;width:160px;text-align:center"><a href="https://www.jigsawplanet.com/?rc=play&amp;pid=10a222912276" style="display:inline-block;position:relative"><img alt="preview" style="display:block;box-shadow:2px 2px 4px rgba(0,0,0,.4)" src="https://im.jigsawplanet.com/?rc=img&amp;pid=10a222912276&amp;size=160"><span style="position:absolute;right:4px;bottom:4px;font:bold 120% Verdana,sans-serif;white-space:nowrap;filter:drop-shadow(1px 1px 2px #000)"><span style="color:#fff;vertical-align:middle">8</span><img style="width:1.5em;height:1.5em;vertical-align:middle" src="https://www.jigsawplanet.com/img/shapes/00.svg" alt="piece"></span></a><a style="display:block;margin-top:.2em;overflow-wrap:break-word" href="https://www.jigsawplanet.com/?rc=play&amp;pid=10a222912276">test01</a></span>
+
 </body>
-<script src="app.js"></script>
-<script src="rompecabezas.js"></script>
+<script src="js/app.js"></script>
+<script src="js/rompecabezas.js"></script>
+<script src="js/drag.js"></script>
+<script src="js/drag2.js"></script>
 
 </html>

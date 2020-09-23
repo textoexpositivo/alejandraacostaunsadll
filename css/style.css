@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #eedfa5;
+}
+
+html, body, div{
+    width: 100%;
+}
+
+
+#canvas{
+    display: flex;
+    margin: auto;
+    
+    /* height: 100%; */
+}
+
+iframe, .girar{
+    display: flex;
+    margin: auto;
+    /* left: 50%; */
+}
+
+
+.subTit{
+    text-align: center;
+    align-content: center;
+    justify-self: center;
+    background: rgb(57, 103, 177);
+    color: white;
+}
+
+
+
+
+
+
+/* ***************************************** */
+
+/* ROMPECABEZAS */
+
+
+#entorno{
+    display: block;
+    margin: 0 auto;
+}
+
+#fondo{
+    opacity: 0.3;
+}
+
+
+
+/* ****************************************** */
+/* DRAG */
+
+  
+.fill {
+background-image: url('https://source.unsplash.com/random/150x150');
+position: relative;
+height: 150px;
+width: 150px;
+top: 5px;
+left: 5px;
+cursor: pointer;
+}
+
+.hold {
+border: solid 5px #ccc;
+}
+
+.empty {
+display: inline-block;
+height: 160px;
+width: 160px;
+margin: 10px;
+border: solid 3px salmon;
+background: white;
+}
+
+.hovered {
+background: #f4f4f4;
+border-style: dashed;
+}
+
+/* DRAG 2 */
+
+.container {
+    background-color: #333;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .draggable {
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    cursor: move;
+  }
+  
+  .draggable.dragging {
+    opacity: .5;
+  }
