@@ -1,0 +1,5 @@
+#canvas, iframe{
+    display: flex;
+    margin: auto;
+    /* left: 50%; */
+}

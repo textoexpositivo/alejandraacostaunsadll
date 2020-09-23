@@ -5,162 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <script src="TweenMax.min.js"></script>
     <script src="Winwheel.min.js"></script>
 </head>
 
 <body>
+    <div class="canvas">
+        <canvas id="canvas" height="400" width="400"></canvas>
+    <!-- </div> -->
     <input type="button" value="Girar" onclick="miRuleta.startAnimation()" />
-    <br />
-    <br />
 
-    <canvas id="canvas" height="400" width="400"></canvas>
-    <script>
+    <!-- <div class="pre"> -->
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTFqfTYM8UzS0zUlX_xXNKylhLOiy0mtTZ9ZpX3smIpSrARKgiQrHmm1kyzbJRwCA/embed?start=false&loop=false&delayms=1000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-        // var del;
-        // var segmentos2 = [];
-        // var segmentos = [
-        //     { 'fillStyle': '#f1c40f', 'text': '1' },
-        //     { 'fillStyle': '#f1f40f', 'text': '2' },
-        //     { 'fillStyle': '#f1b40f', 'text': '3' },
-        //     { 'fillStyle': '#f1e40f', 'text': '4' },
-        //     { 'fillStyle': '#f1c40f', 'text': '5' },
-        //     { 'fillStyle': '#f1f40f', 'text': '6' },
-        //     { 'fillStyle': '#f1b40f', 'text': '7' },
-        //     { 'fillStyle': '#f1e40f', 'text': '8' },
-        //     { 'fillStyle': '#f1c40f', 'text': '9' },
-        //     { 'fillStyle': '#f1f40f', 'text': '10' },
-        // ];
+    </div>
 
-        var miRuleta = new Winwheel({
-            'numSegments': 10,
-            'outerRadius': 170,
-            'segments': [
-            { 'fillStyle': '#02f40f', 'text': '1' },
-            { 'fillStyle': '#f1f40f', 'text': '2' },
-            { 'fillStyle': '#f1b40f', 'text': '3' },
-            { 'fillStyle': '#f1e40f', 'text': '4' },
-            { 'fillStyle': '#f1c40f', 'text': '5' },
-            { 'fillStyle': '#f1f40f', 'text': '6' },
-            { 'fillStyle': '#f1b40f', 'text': '7' },
-            { 'fillStyle': '#f1e40f', 'text': '8' },
-            { 'fillStyle': '#f1c40f', 'text': '9' },
-            { 'fillStyle': '#f1f40f', 'text': '10' },
-        ],
-            'animation': {
-                'type': 'spinToStop',
-                'duration': 5,
-                'callbackFinished': 'Mensaje()',
-                'callbackAfter': 'dibujarIndicador()'
-            }
-        });
-
-        // console.log(miRuleta.segments[1].text);
-        // console.log(miRuleta.segments[2].text);
-        // console.log(miRuleta.segments[3].text);
-        // console.log(miRuleta.segments[4].text);
-        // console.log(miRuleta.segments[5].text);
-        // console.log(miRuleta.segments[6].text);
-        // console.log(miRuleta.segments[7].text);
-        // console.log(miRuleta.segments[8].text);
-        // console.log(miRuleta.segments[9].text);
-        // console.log(miRuleta.segments[10].text);
-        
-        function Mensaje() {
-            // console.log(miRuleta.segments);
-            var SegmentoSeleccionado = miRuleta.getIndicatedSegment();
-
-            alert('Elemento seleccionado: ' + SegmentoSeleccionado.text + '!');
-            // console.log('Seleccionado: ' + SegmentoSeleccionado.text);
-
-
-            miRuleta.stopAnimation(false);
-            miRuleta.rotationAngle = 0;
-
-            // console.log(SegmentoSeleccionado.text);
-
-
-            for (var i = 1; i <= miRuleta.numSegments; i++) {
-                if (SegmentoSeleccionado.text == miRuleta.segments[i].text) {
-                    // console.log(i);
-                    // console.log(i + 1);
-                    deleteSegment(i);
-                    // return;
-                    // miRuleta.draw();
-                // }else{
-                    // console.log('i= '+i);
-                    // miRuleta.draw();
-                }
-            }
-            console.log(SegmentoSeleccionado.text);
-            // miRuleta.draw();
-
-            // if (SegmentoSeleccionado.text == '1') {
-            //     miRuleta.deleteSegment(1)
-            // }
-            // if (SegmentoSeleccionado.text == '2') {
-            //     miRuleta.deleteSegment(2)
-            // }
-            // if (SegmentoSeleccionado.text == '3') {
-            //     miRuleta.deleteSegment(3)
-            // }
-            // if (SegmentoSeleccionado.text == '4') {
-            //     miRuleta.deleteSegment(4)
-            // }
-            // if (SegmentoSeleccionado.text == '5'){
-            //      miRuleta.deleteSegment(5)
-            // }
-            // if (SegmentoSeleccionado.text == '6'){
-            //      miRuleta.deleteSegment(6)
-            // }
-            // if (SegmentoSeleccionado.text == '7'){
-            //      miRuleta.deleteSegment(7)
-            // }
-            // if (SegmentoSeleccionado.text == '8'){
-            //      miRuleta.deleteSegment(8)
-            // }
-            // if (SegmentoSeleccionado.text == '9'){
-            //      miRuleta.deleteSegment(9)
-            // }
-            // if (SegmentoSeleccionado.text == '10'){
-            //      miRuleta.deleteSegment(10)
-            // }
-
-
-
-
-
-
-            miRuleta.draw();
-
-            dibujarIndicador();
-
-        }
-
-
-        function deleteSegment(s) {
-            miRuleta.deleteSegment(s);
-        }
-
-
-
-        dibujarIndicador();
-        function dibujarIndicador() {
-            var ctx = miRuleta.ctx;
-            ctx.strokeStyle = 'navy';
-            ctx.fillStyle = 'black';
-            ctx.lineWidth = 2;
-            ctx.beginPath();
-            ctx.moveTo(170, 0); //point sup_i
-            ctx.lineTo(230, 0); //point inf_i
-            ctx.lineTo(200, 50); //point inf_d
-            ctx.lineTo(200, 50); //point sup_d
-            ctx.stroke();
-            ctx.fill();
-        }
-
-
-    </script>
 </body>
+<script src="app.js"></script>
 
 </html>
