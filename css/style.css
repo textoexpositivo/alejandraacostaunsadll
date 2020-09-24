@@ -53,35 +53,17 @@ iframe, .girar{
     /* width: 300PX; */
 }
 
-/* .container1{
-    background-color: aqua;
-    width: 350px;
-    height: 126px;
-    position: absolute;
-    left: 60px;
-    top: 78px;
-}
-
-.container2{
-    
-}
-
-.container3{
-    
-}
-
-.container4{
-    
-}
-
-.container5{
-    
+/* .draggable.container{
+    transform: scale(2,2);
 } */
+
 .draggable {
-    /* padding: 1rem; */
+    padding: 0.2rem;
     /* background-color: white; */
     /* border: 1px solid black; */
     /* width: 50PX; */
+    /* transform: scale(1.5,1.5); */
+    
     cursor: move;
 }
 
