@@ -2,16 +2,16 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     height: 100%;
     margin: 0;
     padding: 0;
     background-color: #eedfa5;
-}
-
+} */
+/* 
 html, body, div{
     width: 100%;
-}
+} */
 
 
 #canvas{
@@ -44,8 +44,6 @@ iframe, .girar{
 /* ***************************************** */
 
 /* ROMPECABEZAS */
-
-
 #entorno{
     display: block;
     margin: 0 auto;
@@ -57,10 +55,15 @@ iframe, .girar{
 
 
 
+
+
+
+
+
+
+
 /* ****************************************** */
 /* DRAG */
-
-  
 .fill {
 background-image: url('https://source.unsplash.com/random/150x150');
 position: relative;
@@ -89,21 +92,73 @@ background: #f4f4f4;
 border-style: dashed;
 }
 
-/* DRAG 2 */
 
+
+
+
+
+
+
+
+/* DRAG 2 */
 .container {
+    
     background-color: #333;
     padding: 1rem;
     margin-top: 1rem;
-  }
-  
-  .draggable {
+
+    width: 300PX;
+}
+
+.draggable {
     padding: 1rem;
     background-color: white;
     border: 1px solid black;
     cursor: move;
-  }
-  
-  .draggable.dragging {
+}
+
+.draggable.dragging {
     opacity: .5;
-  }
+}
+
+
+
+.total{
+    display: flex;
+    /* flex-flow: row nowrap; */
+    justify-content: space-between;
+    /* display: inline-block; */
+}
+
+
+
+
+
+
+/* ANIMALES */
+#dropZone,
+#animals {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  min-height: 200px;
+  margin-bottom: 20px;
+}
+#dropBox1,
+#dropBox2,
+#dropBox3,
+#dropBox4 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 250px;
+  border: 1px solid #aaaaaa;
+  padding: 1rem;
+}
+img {
+  height: 200px;
+  object-fit: cover;
+  width: 200px;
+}
