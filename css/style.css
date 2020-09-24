@@ -2,14 +2,14 @@
     box-sizing: border-box;
 }
 
-/* body {
-    height: 100%;
+body {
+    width: 100%;
     margin: 0;
     padding: 0;
     background-color: #eedfa5;
-} */
-/* 
-html, body, div{
+}
+
+/* html, body, div{
     width: 100%;
 } */
 
@@ -24,7 +24,6 @@ html, body, div{
 iframe, .girar{
     display: flex;
     margin: auto;
-    /* left: 50%; */
 }
 
 
@@ -41,79 +40,23 @@ iframe, .girar{
 
 
 
-/* ***************************************** */
-
-/* ROMPECABEZAS */
-#entorno{
-    display: block;
-    margin: 0 auto;
-}
-
-#fondo{
-    opacity: 0.3;
-}
-
-
-
-
-
-
-
-
-
-
-/* ****************************************** */
-/* DRAG */
-.fill {
-background-image: url('https://source.unsplash.com/random/150x150');
-position: relative;
-height: 150px;
-width: 150px;
-top: 5px;
-left: 5px;
-cursor: pointer;
-}
-
-.hold {
-border: solid 5px #ccc;
-}
-
-.empty {
-display: inline-block;
-height: 160px;
-width: 160px;
-margin: 10px;
-border: solid 3px salmon;
-background: white;
-}
-
-.hovered {
-background: #f4f4f4;
-border-style: dashed;
-}
-
-
-
-
-
-
 
 
 
 /* DRAG 2 */
 .container {
-    
     background-color: #333;
     padding: 1rem;
     margin-top: 1rem;
-
-    width: 300PX;
+    /* margin-right: 1rem; */
+    /* width: 300PX; */
 }
 
 .draggable {
     padding: 1rem;
     background-color: white;
     border: 1px solid black;
+    width: 50PX;
     cursor: move;
 }
 
@@ -123,42 +66,12 @@ border-style: dashed;
 
 
 
-.total{
-    display: flex;
-    /* flex-flow: row nowrap; */
-    justify-content: space-between;
-    /* display: inline-block; */
+
+
+.color{
+    background-color: chartreuse;
+    position: absolute;
+    width: 10%;
+    height: 10px;
 }
 
-
-
-
-
-
-/* ANIMALES */
-#dropZone,
-#animals {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  min-height: 200px;
-  margin-bottom: 20px;
-}
-#dropBox1,
-#dropBox2,
-#dropBox3,
-#dropBox4 {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  height: 250px;
-  width: 250px;
-  border: 1px solid #aaaaaa;
-  padding: 1rem;
-}
-img {
-  height: 200px;
-  object-fit: cover;
-  width: 200px;
-}

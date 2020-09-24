@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="TweenMax.min.js"></script>
     <script src="Winwheel.min.js"></script>
+    <script src="DragDropTouch.js"></script>
 </head>
 
 <body>
-<!--  -->
+
+
+    <!-- RULETA -->
     <div class="tab">
         <h1 class="subTit">Ruleta</h1>
     </div>
@@ -19,128 +22,73 @@
         <canvas id="canvas" height="400" width="400"></canvas>
         <input class="girar" type="button" value="Girar" onclick="miRuleta.startAnimation()" />
     </div>
-<!--  -->
-<!--  -->
+    <!--  -->
+
+
+
+
+    <!-- PRESENTACIÓN -->
     <div class="pre">
         <h1 class="subTit">Presentaición</h1>
         <iframe
             src="https://docs.google.com/presentation/d/e/2PACX-1vTFqfTYM8UzS0zUlX_xXNKylhLOiy0mtTZ9ZpX3smIpSrARKgiQrHmm1kyzbJRwCA/embed?start=false&loop=false&delayms=1000"
-            frameborder="0" width="400" height="240" allowfullscreen="true" mozallowfullscreen="true"
-            webkitallowfullscreen="true">
+            frameborder="0" width="400" height="240" allowfullscreen="true">
         </iframe>
     </div>
-<!--  -->
-<!--  -->
-    <!-- <div>
-        <h1 class="subTit">Rompecabezas</h1>
-        <svg width="600" height="600" id="entorno">
-		<g id="fondo"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master//pikachu.png" width="400" height="400" x="200" y="100"></g>
-        <g class="padre" id="0"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/1.png" class="movil" draggable="true"></g>
-        <g class="padre" id="1"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/2.png" class="movil" draggable="true"></g>
-        <g class="padre" id="2"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/3.png" class="movil" draggable="true"></g>
-        <g class="padre" id="3"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/4.png" class="movil" draggable="true"></g>
-        <g class="padre" id="4"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/5.png" class="movil" draggable="true"></g>
-        <g class="padre" id="5"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/6.png" class="movil" draggable="true"></g>
-        <g class="padre" id="6"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/7.png" class="movil" draggable="true"></g>
-        <g class="padre" id="7"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/8.png" class="movil" draggable="true"></g>
-        <g class="padre" id="8"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/9.png" class="movil" draggable="true"></g>
-        </svg>
-        <audio id="win" src="https://raw.githubusercontent.com/NestorPlasencia/PikaPuzzle/master/media/win.mp3"></audio>
-    </div> -->
-<!--  -->
-<!--  -->
-    <div class="empty">
-        <div class="fill" draggable="true"> </div>
-    </div>
+    <!--  -->
 
-    <div class="empty"></div>
-    <div class="empty"></div>
-    <div class="empty"></div>
-    <div class="empty"></div>
-<!--  -->
-<!--  -->
+
+
+    <!-- DRAG -->
     <div class="total">
-
-        <div>
-            <div class="container">
-                <p class="draggable" draggable="true">1</p>
-                <img
-                src="https://cdn.mos.cms.futurecdn.net/uhLVL2jTdtQ7ScXCeoeAU6-650-80.jpg.webp"
-                draggable="true"
-                class="draggable"
-                />
-            </div>
-        </div>
-        
         <div class="container">
             <p class="draggable" draggable="true">1</p>
+            <img src="https://cdn.mos.cms.futurecdn.net/uhLVL2jTdtQ7ScXCeoeAU6-650-80.jpg.webp" draggable="true"
+                class="draggable" width="100" />
+        </div>
+
+        <!-- <div class="container">
             <p class="draggable" draggable="true">2</p>
-        </div>
-        
-        <div class="container">
             <p class="draggable" draggable="true">3</p>
+        </div>
+
+        <div class="container">
             <p class="draggable" draggable="true">4</p>
+            <p class="draggable" draggable="true">5</p>
+        </div> -->
+
+        <div class="container">
+            <p class="draggable" draggable="true">6</p>
+            <p class="draggable" draggable="true">7</p>
+            <div draggable="true" class="color" class="draggable"></div>
         </div>
     </div>
-<!--  -->
-<!--  -->
-    <div>
+    <!--  -->
+
+
+    <!-- ROMPECABEZAS -->
+    <!-- <div class="r1">
         <h1 class="subTit">Rompecabezas 1</h1>
-        <iframe style="width: 90%; height: 1500px; border-style: solid; border-width: 2px; border-color: #888" allowFullScreen="true" src="https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?frm=1&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2hlbGVuYXBjL3J1bGV0YS9tYXN0ZXIvaW1nL3I0LmpwZw~~&nop=9&color=charcoal" title="Jigsaw Puzzle">Jigsaw Puzzle</iframe>
+        <iframe style="width: 90%; height: 1500px; border-style: solid; border-width: 2px; border-color: #888"
+            allowFullScreen="true"
+            src="https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?frm=1&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2hlbGVuYXBjL3J1bGV0YS9tYXN0ZXIvaW1nL3I0LmpwZw~~&nop=9&color=charcoal"
+            title="Jigsaw Puzzle">Jigsaw Puzzle</iframe>
     </div>
 
-    <div>
+    <div class="r2">
         <h1 class="subTit">Rompecabezas 2</h1>
-        <iframe style="width: 90%; height: 1500px; border-style: solid; border-width: 2px; border-color: #888" allowFullScreen="true" src="https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?frm=1&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2hlbGVuYXBjL3J1bGV0YS9tYXN0ZXIvaW1nL3IzLmpwZw~~&nop=9&color=charcoal" title="Jigsaw Puzzle">Jigsaw Puzzle</iframe>
-    </div>
-<!--  -->
-<!--  -->
+        <iframe style="width: 90%; height: 1500px; border-style: solid; border-width: 2px; border-color: #888"
+            allowFullScreen="true"
+            src="https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?frm=1&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2hlbGVuYXBjL3J1bGV0YS9tYXN0ZXIvaW1nL3IzLmpwZw~~&nop=9&color=charcoal"
+            title="Jigsaw Puzzle">Jigsaw Puzzle</iframe>
+    </div> -->
 
-    <div id="dropZone">
-        <div id="dropBox1" ondrop="drop(event)" ondragover="allowDrop(event)"><p>Fish</p></div>
-        <div id="dropBox2" ondrop="drop(event)" ondragover="allowDrop(event)"><p>Mouse</p></div>
-        <div id="dropBox3" ondrop="drop(event)" ondragover="allowDrop(event)"><p>Cat</p></div>
-        <div id="dropBox4" ondrop="drop(event)" ondragover="allowDrop(event)"><p>Dog</p></div>
-    </div>
-
-    <div id="animals" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <img
-        id="cat"
-        src="https://www.veterinarypracticenews.com/wp-content/uploads/2019/10/bigstock-Four-Kittens-On-A-White-Backgr-2730282.jpg"
-        draggable="true"
-        ondragstart="drag(event)"
-        width="300"
-        />
-        <img
-            id="dog"
-            src="https://www.wallpaperflare.com/static/800/62/574/puppies-white-background-paws-yellow-wallpaper-preview.jpg"
-            draggable="true"
-            ondragstart="drag(event)"
-            width="300"
-            />
-        <img
-            id="mouse"
-            src="https://www.adamspestcontrol.com/cms-files/size-992x992/adams-mouse-600x600.jpg"
-            draggable="true"
-            ondragstart="drag(event)"
-            width="300"
-            />
-        <img
-            id="fish"
-            src="https://cdn.mos.cms.futurecdn.net/uhLVL2jTdtQ7ScXCeoeAU6-650-80.jpg.webp"
-            draggable="true"
-            ondragstart="drag(event)"
-            width="300"
-            />
-    </div>
-<!--  -->
+    
+    <!--  -->
 
 </body>
-<script src="js/app.js"></script>
-<script src="js/rompecabezas.js"></script>
+<script src="js/ruleta.js"></script>
 <script src="js/drag.js"></script>
-<script src="js/drag2.js"></script>
-<script src="js/DragDropTouch.js"></script>
-<script src="js/dragAnimales.js"></script>
+
 
 </html>
