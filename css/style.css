@@ -46,7 +46,7 @@ iframe, .girar{
 /* DRAG 2 */
 .container {
     
-    background-color: #333;
+    background-color: #ac272700;
     /* position: absolute; */
     /* padding: 1rem; */
     /* margin-top: 1rem; */
@@ -64,8 +64,8 @@ iframe, .girar{
     /* border: 1px solid black; */
     /* width: 50PX; */
     /* transform: scale(1.5,1.5); */
-    
     cursor: move;
+    overflow: auto;
 }
 
 .draggable.dragging {
