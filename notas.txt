@@ -1,0 +1,43 @@
+            <div class="container" style="
+            width: 352px;
+            height: 126px;
+            position: absolute;
+            left: 59px;
+            top: 78px;"
+            >
+            </div>
+
+            <div class="container" style="
+            width: 380px;
+            height: 274px;
+            position: absolute;
+            left: 420px;
+            top: 66px;">
+            </div>
+
+            <div class="container" style="
+            width: 497px;
+            height: 132px;
+            position: absolute;
+            left: 67px;
+            top: 489px;;
+            ">
+            </div>
+
+            <div class="container" style="
+            width: 316px;
+            height: 155px;
+            position: absolute;
+            left: 437px;
+            top: 623px;
+            ">
+            </div>
+
+            <div class="container" style="
+            width: 352px;
+            height: 242px;
+            position: absolute;
+            left: 69px;
+            top: 767px;
+            ">
+            </div>
