@@ -31,7 +31,7 @@ iframe, .girar{
     text-align: center;
     align-content: center;
     justify-self: center;
-    background: rgb(57, 103, 177);
+    background: #3967b1;
     color: white;
 }
 
@@ -46,17 +46,42 @@ iframe, .girar{
 /* DRAG 2 */
 .container {
     background-color: #333;
-    padding: 1rem;
-    margin-top: 1rem;
+    /* position: absolute; */
+    /* padding: 1rem; */
+    /* margin-top: 1rem; */
     /* margin-right: 1rem; */
     /* width: 300PX; */
 }
 
+/* .container1{
+    background-color: aqua;
+    width: 350px;
+    height: 126px;
+    position: absolute;
+    left: 60px;
+    top: 78px;
+}
+
+.container2{
+    
+}
+
+.container3{
+    
+}
+
+.container4{
+    
+}
+
+.container5{
+    
+} */
 .draggable {
-    padding: 1rem;
-    background-color: white;
-    border: 1px solid black;
-    width: 50PX;
+    /* padding: 1rem; */
+    /* background-color: white; */
+    /* border: 1px solid black; */
+    /* width: 50PX; */
     cursor: move;
 }
 
