@@ -15,16 +15,13 @@
 
 <body>
 
-    <!-- PREGUNTAS -->
-    
-    <!--  -->
-
 
     <!-- TITULO -->
     <div>
         <h1 style="
             margin: 0;
-            background-color: red;
+            background-color: rgb(98, 93, 112);
+            color: thistle;
             text-align: center;
             vertical-align: center;
             font-size: 120px;
@@ -34,45 +31,6 @@
     </div>
     <!--  -->
 
-    <!-- RULETA -->
-    <h1 class="subTit">Ruleta</h1>
-
-    <div class="ruleta_pregutas">
-
-
-        <div id="modal" class="popup_box">
-            <h1 id="pregNum"></h1>
-            <h2 id="preg"></h2>
-            <label id="op1" ></br></label>
-            <label id="op2" ></br></label>
-            <label id="op3" ></br></label>
-            <div class="btns">
-                <!-- <a href="#" class="btn1">A</a>
-                <a href="#" class="btn2">B</a>
-                <a href="#" class="btn3">C</a> -->
-
-                <!-- <input id="btn1" class="btn1" type="button" value="A"/>
-                <input id="btn2" class="btn2" type="button" value="B"/>
-                <input id="btn3" class="btn3" type="button" value="C"/> -->
-
-                <input class="btn" type="button" value="A" onclick="btn(0)"/>
-                <input class="btn" type="button" value="B" onclick="btn(1)"/>
-                <input class="btn" type="button" value="C" onclick="btn(2)"/>
-<!-- 
-                <input id="A" class="btn" type="button" value="A" onclick="btn(A)"/>
-                <input id="B" class="btn" type="button" value="B" onclick="btn(B)"/>
-                <input id="C" class="btn" type="button" value="C" onclick="btn(B)"/> -->
-
-            </div>
-        </div>
-
-
-        <p id="intentos"></p>
-        <input type="button" value="Test" onclick="test()"" />
-        <canvas id="canvas" height="400" width="400"></canvas>
-        <input class="girar" type="button" value="Girar" onclick="girar()" />
-    </div>
-    <!--  -->
 
 
 
@@ -113,7 +71,7 @@
     <!--  -->
 
     <!-- REVISTAS -->
-    <!-- <h1 class="subTit">Revistas</h1>
+    <h1 class="subTit">Paratexto</h1>
 
     <div style="display: flex; margin: auto; background-color: red; width: 1200px;">
         <div style="position: relative;">
@@ -194,7 +152,7 @@
 
     </div>
     <div class="container" style="background-color: #272727;">
-        <h2 style="text-align: center; color: white; background-color: #3967b1;">Paratextos</h2>
+        <h2 style="text-align: center; color: white; background-color: #3967b1;">Recortes</h2>
         <img src="img/recorte05.jpg" alt="" class="draggable" draggable="true">
         <img src="img/recorte01.jpg" alt="" class="draggable" draggable="true">
         <img src="img/recorte07.png" alt="" class="draggable" draggable="true">
@@ -203,29 +161,67 @@
         <img src="img/recorte02.jpg" alt="" class="draggable" draggable="true">
         <img src="img/recorte04.jpg" alt="" class="draggable" draggable="true">
         <img src="img/recorte06.jpg" alt="" class="draggable" draggable="true">
-    </div> -->
+    </div>
     <!--  -->
 
 
     <!-- ROMPECABEZAS -->
-    <!-- <div class="r1">
-        <h1 class="subTit">Rompecabezas 1</h1>
+    <div class="r1">
+        <h1 class="subTit">Rompecabezas (Parte 1)</h1>
         <iframe style="width: 90%; height: 1500px; border-style: solid; border-width: 2px; border-color: #888"
             allowFullScreen="true"
             src="https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?frm=1&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2hlbGVuYXBjL3J1bGV0YS9tYXN0ZXIvaW1nL3I0LmpwZw~~&nop=9&color=charcoal"
             title="Jigsaw Puzzle">Jigsaw Puzzle</iframe>
-    </div> -->
+    </div>
 
-    <!-- <div class="r2">
-        <h1 class="subTit">Rompecabezas 2</h1>
+    <div class="r2">
+        <h1 class="subTit">Rompecabezas (Parte 2)</h1>
         <iframe style="width: 90%; height: 1500px; border-style: solid; border-width: 2px; border-color: #888"
             allowFullScreen="true"
             src="https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?frm=1&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2hlbGVuYXBjL3J1bGV0YS9tYXN0ZXIvaW1nL3IzLmpwZw~~&nop=9&color=charcoal"
             title="Jigsaw Puzzle">Jigsaw Puzzle</iframe>
-    </div> -->
+    </div>
     <!--  -->
 
+    <!-- RULETA -->
+    <h1 class="subTit">Ruleta</h1>
 
+    <div class="ruleta_pregutas">
+
+        <div id="resultado">
+            <h1 id="resTotal"></h1>
+            <label id="res1"></br></label>
+            <label id="res2"></br></label>
+            <label id="res3"></br></label>
+            <label id="res4"></br></label>
+            <label id="res5"></br></label>
+            <div class="btns">
+                <input class="btnOk" type="button" value="Ok" onclick="btnOk()" />
+            </div>
+        </div>
+
+
+        <!-- MODAL PREGUNTAS-->
+        <div id="modal" class="popup_box">
+            <h1 id="pregNum"></h1>
+            <h2 id="preg"></h2>
+            <label id="op1"></br></label>
+            <label id="op2"></br></label>
+            <label id="op3"></br></label>
+            <div class="btns">
+                <input class="btn" type="button" value="A" onclick="btn(0)" />
+                <input class="btn" type="button" value="B" onclick="btn(1)" />
+                <input class="btn" type="button" value="C" onclick="btn(2)" />
+            </div>
+        </div>
+
+
+        <p id="intentos"></p>
+        <input type="button" value="Test" onclick="test()"" />
+        <canvas id=" canvas" height="400" width="400"></canvas>
+        <input id="girar" type="button" value="Girar" onclick="girar()" />
+    </div>
+    <!--  -->
 
 
 

@@ -12,12 +12,36 @@ body {
     background-color: #494f66;
 }
 
+
+
 .ruleta_preguntas{
     display: flex;
     margin: auto;
 }
 
 .popup_box{
+
+    position: absolute;
+    display: block;
+    top: 500px;
+    width: 100%;
+
+    user-select: none;
+    background: #f2f2f2;
+    text-align: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 3px, solid #b3b3b3;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    transition: 0.3s ease-in-out;
+
+    /*CAMBIAR*/
+    opacity: 0;
+    pointer-events: none;
+}
+
+#resultado{
 
     position: absolute;
     display: block;
@@ -50,14 +74,23 @@ body {
     margin: 40px 0 0 0;    
 }
 
+#resultado h1{
+    font-size: 30px;
+    color: #1b2631;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+#resultado .btns{
+    margin: 40px 0 0 0;    
+}
+
 .btns{
     display: flex;
-    /* margin: 10px; */
-    /* margin-left: 80%; */
     justify-content: space-around;
 }
 
-/* .btns .btn1, .btns .btn2, .btns .btn3{
+.btns .btn{
     background: #999999;
     color: white;
     font-size: 18px;
@@ -67,13 +100,8 @@ body {
 
 } 
 
-.btns .btn1:hover, .btns .btn2:hover, .btns .btn3:hover{
-    transition: 0.5s;
-    background: #727272;
-} */
-
-.btns .btn{
-    background: #999999;
+.btns .btnOk{
+    background: #41aa53;
     color: white;
     font-size: 18px;
     padding: 10px 13px;
@@ -86,6 +114,12 @@ body {
     transition: 0.5s;
     background: #727272;
 }
+
+.btns .btnOk:hover{
+    transition: 0.5s;
+    background: #358542;
+}
+
 
 #intentos{
     margin: auto;
@@ -123,7 +157,7 @@ iframe, #canvas{
 }
 
 
-.girar{
+#girar{
     display: flex;
     margin: auto;
     background: #2981bc;
@@ -134,6 +168,11 @@ iframe, #canvas{
     padding: 10px 15px;
     border: 1px solid #0059b3;
     border-radius: 5px;
+    /* pointer-events: auto; */
+}
+
+#girar:hover{
+    background: #3a93cf; 
 }
 
 .subTit{
@@ -145,7 +184,14 @@ iframe, #canvas{
 }
 
 
-
+#intentos{
+    position: absolute;
+    background: #2981bc;
+    /* border: 1px solid white; */
+    border: 1px solid #0059b3;
+    padding: 10px;
+    border-radius: 10px;
+}
 
 
 
