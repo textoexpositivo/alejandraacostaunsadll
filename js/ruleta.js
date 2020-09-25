@@ -150,10 +150,10 @@ function girar() {
         miRuleta.startAnimation();
         intentos--;
         document.getElementById('intentos').innerHTML = `Intentos: ${intentos}`;
-    } else {
+    // } else {
         // document.getElementById('girar').setAttribute('style', 'pointer-events: auto');
         // document.getElementById('girar').setAttribute('style', 'pointer-events: none');
-        alert('No quedan más intentos');
+        // alert('No quedan más intentos');
     };
 }
 
@@ -174,7 +174,6 @@ function btn(index) {
     if (intentos <= 0) {
         resultadoTotal(puntos, arrResp);
         document.getElementById('resultado').setAttribute('style', 'opacity: 1; pointer-events: auto;')
-        // document.getElementById('puntajeFinal').innerHTML = `Puntaje: ${puntos}`;
         document.getElementById('intentos').innerHTML = `Puntaje: ${puntos}`;
     }
 }
