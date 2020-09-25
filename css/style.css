@@ -157,16 +157,12 @@ body {
 }
 
 
-#canvas{
+#canvas, iframe{
     display: flex;
     margin: auto;
 }
 
 
-iframe{
-
-
-}
 
 
 #girar{
