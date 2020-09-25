@@ -1,31 +1,140 @@
+
+
 *{
     box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
 }
 
 body {
     /* width: 100%; */
     margin: 0;
     padding: 0;
-    background-color: #eedfa5;
+    background-color: #494f66;
 }
 
-/* html, body, div{
+.ruleta_preguntas{
+    display: flex;
+    margin: auto;
+}
+
+.popup_box{
+
+    position: absolute;
+    display: block;
+    top: 500px;
     width: 100%;
+
+    user-select: none;
+    background: #f2f2f2;
+    text-align: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 3px, solid #b3b3b3;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    transition: 0.3s ease-in-out;
+
+    /*CAMBIAR*/
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup_box h1{
+    font-size: 30px;
+    color: #1b2631;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+.popup_box .btns{
+    margin: 40px 0 0 0;    
+}
+
+.btns{
+    display: flex;
+    /* margin: 10px; */
+    /* margin-left: 80%; */
+    justify-content: space-around;
+}
+
+/* .btns .btn1, .btns .btn2, .btns .btn3{
+    background: #999999;
+    color: white;
+    font-size: 18px;
+    padding: 10px 13px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+
+} 
+
+.btns .btn1:hover, .btns .btn2:hover, .btns .btn3:hover{
+    transition: 0.5s;
+    background: #727272;
 } */
 
+.btns .btn{
+    background: #999999;
+    color: white;
+    font-size: 18px;
+    padding: 10px 13px;
+    border: 1px solid #808080;
+    border-radius: 5px;
 
-#canvas{
-    display: flex;
-    margin: auto;
-    
-    /* height: 100%; */
+} 
+
+.btns .btn:hover{
+    transition: 0.5s;
+    background: #727272;
 }
 
-iframe, .girar{
-    display: flex;
+#intentos{
     margin: auto;
+    margin-left: 4rem;
+    font-size: 2rem;
+    color: white; 
 }
 
+.presentacion{
+    width: 80%;
+    margin: auto;
+    text-indent: 4rem;
+    font-size: 1.4rem;
+    line-height : 2.4rem;
+    text-align: justify;
+    color: white;
+}
+
+
+.bienvenido{
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    /* color: red; */
+}
+
+
+
+
+
+iframe, #canvas{
+    display: flex;
+    margin: auto;
+
+}
+
+
+.girar{
+    display: flex;
+    margin: auto;
+    background: #2981bc;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 15px;
+    border: 1px solid #0059b3;
+    border-radius: 5px;
+}
 
 .subTit{
     text-align: center;
@@ -41,11 +150,9 @@ iframe, .girar{
 
 
 
-
-
 /* DRAG 2 */
 .container {
-    background-color: #ac272700;
+    background-color: rgba(172, 39, 39, 0);
 }
 
 

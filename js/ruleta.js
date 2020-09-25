@@ -1,6 +1,14 @@
 
 // alert(screen.width);
+let intentos = 5;
+let puntos = 0;
+var respuesta;
 
+document.getElementById('intentos').innerHTML = `Intentos: ${intentos}`;
+
+
+
+var modal = document.getElementById("modal");
 
 var miRuleta = new Winwheel({
     'numSegments': 10,
@@ -25,27 +33,70 @@ var miRuleta = new Winwheel({
     }
 });
 
+
+
+
+
 function Mensaje() {
     let selSeg = miRuleta.getIndicatedSegment();
 
-    alert('Elemento seleccionado: ' + selSeg.text + '!');
+
+    preguntas(selSeg.text,'¿Cómo me llamo?','Pepe','Pablo','Joaquín','B');    
+
+    document.getElementById('modal').setAttribute('style', 'opacity: 1; pointer-events: auto;');
+    
+    // alert('Elemento seleccionado: ' + selSeg.text + '!');
+
 
     miRuleta.stopAnimation(false);
     miRuleta.rotationAngle = 0;
 
     for (let i = 1; i <= miRuleta.numSegments; i++) {
-        // if (selSeg.text == miRuleta.segments[i].text) deleteSegment(i);
-        if (selSeg.text == miRuleta.segments[i].text) miRuleta.deleteSegment(i);;
+        if (selSeg.text == miRuleta.segments[i].text){
+            miRuleta.deleteSegment(i);
+
+        }
     }
 
-    miRuleta.draw();
-    dibujarIndicador();
+    // miRuleta.draw();
+    // dibujarIndicador();
+    // console.log('iniciar');
+    intentos--
+    document.getElementById('intentos').innerHTML = `Intentos: ${intentos}`;
+
 }
 
 
 // function deleteSegment(s) {
 //     miRuleta.deleteSegment(s);
 // }
+
+// function preguntas(index){
+//     if(index == '1') console.log('Unoooooo');
+//     if(index == '2') console.log('DoOOOos');
+//     if(index == '3') console.log('Tresesese');
+//     if(index == '4') console.log('Cuandootoo');
+//     if(index == '5') console.log('Ciencoocooc');
+//     if(index == '6') console.log('Seisiesi');
+//     if(index == '7') console.log('Sueete');
+//     if(index == '8') console.log('Oojhchco');
+//     if(index == '9') console.log('Nuuevee');
+//     if(index == '10') console.log('Sieeeeeeeeeeeeeeeeeeeez');
+// }
+
+function girar(){
+    // console.log(puntos);
+    if(intentos >= 1){
+        miRuleta.startAnimation();
+    }else{
+        alert('No quedan más intentos');
+    };
+
+
+
+
+}
+
 
 
 dibujarIndicador();
@@ -64,7 +115,37 @@ function dibujarIndicador() {
 }
 
 
+// oreguntas
+function preguntas(num, preg, op1, op2, op3, res){
+    document.getElementById('pregNum').innerHTML = `Pregunta Nº ${num}`;
+    document.getElementById('preg').innerHTML = preg;
+    document.getElementById('op1').innerHTML = `A) ${op1}</br>`;
+    document.getElementById('op2').innerHTML = `B) ${op2}</br>`;
+    document.getElementById('op3').innerHTML = `C) ${op3}</br>`;
+    respuesta = res;
+}
 
+
+function btn(index){
+
+    if(respuesta == document.querySelectorAll('.btn')[index].value) puntos+=2
+
+    document.getElementById('modal').setAttribute('style', 'opacity: 0; pointer-events: none;');
+    miRuleta.draw();
+    dibujarIndicador();
+    if(intentos <1){
+        console.log(puntos);
+    }
+    // console.log('Puntos: '+puntos);
+}
+
+
+
+
+function test(){
+    document.getElementById('modal').setAttribute('style', 'opacity: 1; pointer-events: auto;')
+
+}
 
 
 
