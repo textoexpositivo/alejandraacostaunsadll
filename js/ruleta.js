@@ -41,6 +41,8 @@ var miRuleta = new Winwheel({
 function Mensaje() {
     let selSeg = miRuleta.getIndicatedSegment();
     arrResp.push(selSeg.text);
+    
+    
     if(selSeg.text == '1'){
         preguntas(selSeg.text,
             '¿Qué es un texto expositivo?',
@@ -124,10 +126,9 @@ function Mensaje() {
             )
     }
 
-
     document.getElementById('modal').setAttribute('style', 'opacity: 1; pointer-events: auto;');
     
-    // alert('Elemento seleccionado: ' + selSeg.text + '!');
+    alert('Elemento seleccionado: ' + selSeg.text + '!');
 
 
     miRuleta.stopAnimation(false);
@@ -147,17 +148,12 @@ function Mensaje() {
 
 
 function girar(){
-    // console.log(puntos);
     document.getElementById('girar').setAttribute('style', 'pointer-events: none');
     if(intentos >= 1){
         miRuleta.startAnimation();
     }else{
         alert('No quedan más intentos');
     };
-
-
-
-
 }
 
 
@@ -178,7 +174,7 @@ function dibujarIndicador() {
 }
 
 
-// oreguntas
+// preguntas
 function preguntas(num, preg, op1, op2, op3, res){
     document.getElementById('pregNum').innerHTML = `Pregunta Nº ${num}`;
     document.getElementById('preg').innerHTML = preg;
@@ -208,13 +204,6 @@ function btn(index){
 }
 
 
-
-
-// function test(){
-//     resultadoTotal(puntos, arrResp);
-//     document.getElementById('resultado').setAttribute('style', 'opacity: 1; pointer-events: auto;')
-
-// }
 
 function btnOk(){
     document.getElementById('resultado').setAttribute('style', 'opacity: 0; pointer-events: none;');

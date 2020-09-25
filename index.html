@@ -31,7 +31,44 @@
     </div>
     <!--  -->
 
+    <!-- RULETA -->
+    <h1 class="subTit">Ruleta</h1>
 
+    <div class="ruleta_pregutas">
+
+        <div id="resultado">
+            <h1 id="resTotal"></h1>
+            <label id="res1"></br></label>
+            <label id="res2"></br></label>
+            <label id="res3"></br></label>
+            <label id="res4"></br></label>
+            <label id="res5"></br></label>
+            <div class="btns">
+                <input class="btnOk" type="button" value="Ok" onclick="btnOk()" />
+            </div>
+        </div>
+
+
+        <!-- MODAL PREGUNTAS-->
+        <div id="modal" class="popup_box">
+            <h1 id="pregNum"></h1>
+            <h2 id="preg"></h2>
+            <label id="op1"></br></label>
+            <label id="op2"></br></label>
+            <label id="op3"></br></label>
+            <div class="btns">
+                <input class="btn" type="button" value="A" onclick="btn(0)" />
+                <input class="btn" type="button" value="B" onclick="btn(1)" />
+                <input class="btn" type="button" value="C" onclick="btn(2)" />
+            </div>
+        </div>
+
+
+        <p id="intentos"></p>
+        <canvas id=" canvas" height="400" width="400"></canvas>
+        <input id="girar" type="button" value="Girar" onclick="girar()" />
+    </div>
+    <!--  -->
 
 
 
@@ -63,10 +100,10 @@
     <!-- TUTORIAL -->
     <div class="pre">
         <h1 class="subTit">Tutorial</h1>
-        <!-- <iframe
+        <iframe
             src="https://docs.google.com/presentation/d/e/2PACX-1vTFqfTYM8UzS0zUlX_xXNKylhLOiy0mtTZ9ZpX3smIpSrARKgiQrHmm1kyzbJRwCA/embed?start=false&loop=false&delayms=1000"
             frameborder="0" width="800" height="480" allowfullscreen="true">
-        </iframe> -->
+        </iframe>
     </div>
     <!--  -->
 
@@ -183,45 +220,7 @@
     </div>
     <!--  -->
 
-    <!-- RULETA -->
-    <h1 class="subTit">Ruleta</h1>
 
-    <div class="ruleta_pregutas">
-
-        <div id="resultado">
-            <h1 id="resTotal"></h1>
-            <label id="res1"></br></label>
-            <label id="res2"></br></label>
-            <label id="res3"></br></label>
-            <label id="res4"></br></label>
-            <label id="res5"></br></label>
-            <div class="btns">
-                <input class="btnOk" type="button" value="Ok" onclick="btnOk()" />
-            </div>
-        </div>
-
-
-        <!-- MODAL PREGUNTAS-->
-        <div id="modal" class="popup_box">
-            <h1 id="pregNum"></h1>
-            <h2 id="preg"></h2>
-            <label id="op1"></br></label>
-            <label id="op2"></br></label>
-            <label id="op3"></br></label>
-            <div class="btns">
-                <input class="btn" type="button" value="A" onclick="btn(0)" />
-                <input class="btn" type="button" value="B" onclick="btn(1)" />
-                <input class="btn" type="button" value="C" onclick="btn(2)" />
-            </div>
-        </div>
-
-
-        <p id="intentos"></p>
-        <input type="button" value="Test" onclick="test()"" />
-        <canvas id=" canvas" height="400" width="400"></canvas>
-        <input id="girar" type="button" value="Girar" onclick="girar()" />
-    </div>
-    <!--  -->
 
 
 
