@@ -4,16 +4,22 @@ let intentos = 5;
 let puntos = 0;
 var respuesta;
 var arrResp = [];
+const scalaRuleta = 250;
 
 document.getElementById('intentos').innerHTML = `Intentos: ${intentos}`;
 
-
+document.getElementById('canvas').setAttribute('height', (scalaRuleta*2)+30);
+document.getElementById('canvas').setAttribute('width', (scalaRuleta*2)+30);
+// canvas 170*2 = scalaRuleta *2
 
 var modal = document.getElementById("modal");
 
 var miRuleta = new Winwheel({
     'numSegments': 10,
-    'outerRadius': 170,
+    'outerRadius': scalaRuleta,
+    'textAlignment': 'outer',
+    'textMargin': 50,
+    'textFontSize' : 30,
     'segments': [
         { 'fillStyle': '#02f40f', 'text': '1' },
         { 'fillStyle': '#f1f40f', 'text': '2' },
@@ -28,7 +34,7 @@ var miRuleta = new Winwheel({
     ],
     'animation': {
         'type': 'spinToStop',
-        'duration': 1,
+        'duration': 3,
         'callbackFinished': 'Mensaje()',
         'callbackAfter': 'dibujarIndicador()'
     }
@@ -42,7 +48,6 @@ function Mensaje() {
 
     let selSeg = miRuleta.getIndicatedSegment();
     arrResp.push(selSeg.text);
-
 
     if (selSeg.text == '1') {
         preguntas(selSeg.text,
@@ -188,16 +193,23 @@ function btn(index) {
 
 
 dibujarIndicador();
+
 function dibujarIndicador() {
     var ctx = miRuleta.ctx;
     ctx.strokeStyle = 'navy';
-    ctx.fillStyle = 'black';
-    ctx.lineWidth = 2;
+    ctx.fillStyle = 'red';
+    ctx.lineWidth = 1;
     ctx.beginPath();
-    ctx.moveTo(170, 0); //point sup_i
-    ctx.lineTo(230, 0); //point inf_i
-    ctx.lineTo(200, 50); //point inf_d
-    ctx.lineTo(200, 50); //point sup_d
+    /*
+    ctx.moveTo(140, 0); //point sup_i scalaRuleta -30
+    ctx.lineTo(200, 0); //point inf_i scalaRuleta +30
+    ctx.lineTo(170, 50); //point inf_d scalaRuleta
+    ctx.lineTo(170, 50); //point sup_d scalaRuleta
+    */
+    ctx.moveTo((scalaRuleta-30), 0); //point sup_i scalaRuleta -30
+    ctx.lineTo((scalaRuleta+60), 0); //point inf_i scalaRuleta +30
+    ctx.lineTo(scalaRuleta+15, 50); //point inf_d scalaRuleta
+    ctx.lineTo(scalaRuleta+15, 50); //point sup_d scalaRuleta
     ctx.stroke();
     ctx.fill();
 }
