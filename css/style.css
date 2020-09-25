@@ -15,15 +15,18 @@ body {
 
 
 .ruleta_preguntas{
-    display: flex;
-    margin: auto;
+    position: relative;
 }
+
+
+
 
 .popup_box{
 
     position: absolute;
-    display: block;
-    top: 500px;
+    /* display: block; */
+    /* top: 500px; */
+    /* bottom: 0px; */
     width: 100%;
 
     user-select: none;
@@ -44,8 +47,8 @@ body {
 #resultado{
 
     position: absolute;
-    display: block;
-    top: 500px;
+    /* display: block; */
+    /* top: 500px; */
     width: 100%;
 
     user-select: none;
@@ -128,6 +131,13 @@ body {
     color: white; 
 }
 
+#puntajeFinal{
+    margin: auto;
+    margin-left: 4rem;
+    font-size: 2rem;
+    color: white; 
+}
+
 .presentacion{
     width: 80%;
     margin: auto;
@@ -147,12 +157,14 @@ body {
 }
 
 
-
-
-
-iframe, #canvas{
+#canvas{
     display: flex;
     margin: auto;
+}
+
+
+iframe{
+
 
 }
 
