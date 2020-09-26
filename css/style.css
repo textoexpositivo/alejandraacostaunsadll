@@ -14,11 +14,13 @@ body {
     /* width: 100%; */
 }
 
-/* @media screen and (max-width : 1200px) {
-    body{
-        width: 1200px;
-    }
-} */
+.subTit{
+    text-align: center;
+    align-content: center;
+    justify-self: center;
+    background: #3967b1;
+    color: white;
+}
 
 @media only screen and (max-device-width : 1200px) {
     body{
@@ -26,11 +28,9 @@ body {
     }
 }
 
-/* @media screen and (min-width: 600px) {
-    #buttonAdd, #buttonHelp, #offline {
-      padding-right: 20px;
-    }
-} */
+
+
+
 
 .presentacion{
     width: 80%;
@@ -64,27 +64,11 @@ iframe{
 
 
 .draggable {
-    /* padding: 0.2rem; */
-    /* background-color: white; */
-    /* border: 1px solid black; */
-    /* width: 50PX; */
-    /* transform: scale(0.5,0.5); */
     cursor: move;
     overflow: auto;
 }
 
 .draggable.dragging {
     opacity: .5;
-}
-
-
-
-
-
-.color{
-    background-color: chartreuse;
-    position: absolute;
-    width: 10%;
-    height: 10px;
 }
 
