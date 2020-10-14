@@ -62,15 +62,23 @@
     <!-- TUTORIAL -->
     <div class="pre">
         <h1 class="subTit">Tutorial</h1>
-        <!-- <iframe
+        <iframe
             src="https://docs.google.com/presentation/d/e/2PACX-1vTFqfTYM8UzS0zUlX_xXNKylhLOiy0mtTZ9ZpX3smIpSrARKgiQrHmm1kyzbJRwCA/embed?start=false&loop=false&delayms=1000"
             frameborder="0" width="800" height="480" allowfullscreen="true">
-        </iframe> -->
+        </iframe>
     </div>
     <!--  -->
 
     <!-- REVISTAS -->
     <h1 class="subTit">Paratexto</h1>
+
+    <p class="presentacion">El paratexto es un elemento que acompaña al texto y contribuye a la comprensión lectora.
+        Estos pueden ser: imágenes, títulos, subtítulos, glosarios etc. Permiten anticipar el tema del texto a través de inferencias.
+    </p>
+
+
+
+
     <div style="display: flex; margin: auto; background-color: red; width: 1200px;">
         <div style="position: relative;">
 
@@ -118,7 +126,6 @@
 
         </div>
 
-
         <div style="position: relative;">
             <img src="img/hoja2.jpg" alt="" width="600px">
 
@@ -149,6 +156,7 @@
         </div>
 
     </div>
+
     <div class="container" style="background-color: #272727;">
         <h2 style="text-align: center; color: white; background-color: #3967b1;">Recortes</h2>
         <img src="img/recorte05.jpg" alt="" class="draggable" draggable="true">
@@ -162,6 +170,13 @@
     </div>
     <!--  -->
 
+
+
+
+
+
+
+    
 
     <!-- ROMPECABEZAS -->
     <div class="r1">
@@ -181,34 +196,28 @@
     </div>
     <!--  -->
 
+
+
     <!-- RULETA -->
     <h1 class="subTit">Ruleta</h1>
 
     <div>
         <h5 class="subHeader">AUTOEVALUACIÓN</h5>
         <p class="subHeader">Actividades</p>
-        <p class="presentacion">
-            Los alumnos harán girar una ruleta virtual y responderán las preguntas elegidas al azar. Participarán con 5 tiros cada uno.
-            Las preguntas serán de comprensión de los textos expositivos leídos.
-            Las preguntas, con opciones, tendrán un valor de 20 puntos cada una. Al finalizar el juego podrá el estudiante consultar el puntaje obtenido.
-        </p>
+        <ul style="margin-top: 1rem" class="presentacion">
+            <li>Los alumnos harán girar una ruleta virtual y responderán las preguntas elegidas al azar.</li>
+            <li>Participarán con 5 tiros cada uno.</li>
+            <li>Las preguntas serán de comprensión de los textos expositivos leídos.</li>
+            <li>Las preguntas, con opciones, tendrán un valor de 20 puntos cada una.</li>
+        </ul>
+        
+        <p style="margin-top: 2rem" class="presentacion">Al finalizar el juego podrá el estudiante consultar el puntaje obtenido.</p>
         <div style="height: 60px;"></div>
     </div>
 
+
+    <!-- JUEGO -->
     <div class="ruleta_pregutas">
-        <div id="resultado">
-            <h1 id="resTotal"></h1>
-            <label id="res1"></br></label>
-            <label id="res2"></br></label>
-            <label id="res3"></br></label>
-            <label id="res4"></br></label>
-            <label id="res5"></br></label>
-            <div class="btns">
-                <input class="btnOk" type="button" value="Ok" onclick="btnOk()" />
-            </div>
-        </div>
-
-
         <!-- MODAL PREGUNTAS-->
         <div id="modal" class="popup_box">
             <h1 id="pregNum"></h1>
@@ -223,11 +232,22 @@
             </div>
         </div>
 
+        <div id="resultado">
+            <h1 id="resTotal"></h1>
+            <label id="res1"></br></label>
+            <label id="res2"></br></label>
+            <label id="res3"></br></label>
+            <label id="res4"></br></label>
+            <label id="res5"></br></label>
+            <div class="btns">
+                <input class="btnOk" type="button" value="Ok" onclick="btnOk()" />
+            </div>
+        </div>
 
         <p id="intentos"></p>
-        <!-- <canvas id="canvas" height="340" width="340"></canvas> -->
         <canvas id="canvas"></canvas>
         <input id="girar" type="button" value="Girar" onclick="girar()" />
+
     </div>
     <!--  -->
 

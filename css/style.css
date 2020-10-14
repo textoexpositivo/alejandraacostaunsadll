@@ -5,6 +5,13 @@
     font-family: 'Rubik', sans-serif;
 }
 
+@media only screen and (max-device-width : 1200px) {
+    body{
+        width: 1200px;
+    }
+}
+
+
 body {
     /* width: 100%; */
     margin: 0;
@@ -22,13 +29,6 @@ body {
     color: white;
 }
 
-@media only screen and (max-device-width : 1200px) {
-    body{
-        width: 1200px;
-    }
-}
-
-
 .subHeader{
     width: 80%;
     margin: auto;
@@ -37,7 +37,6 @@ body {
     text-align: center;
     color: white;
 }
-
 
 .presentacion{
     width: 80%;
@@ -48,7 +47,6 @@ body {
     text-align: justify;
     color: white;
 }
-
 
 .bienvenido{
     text-align: center;

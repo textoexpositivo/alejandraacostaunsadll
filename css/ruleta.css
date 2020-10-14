@@ -159,20 +159,21 @@
 #girar{
     display: flex;
     margin: auto;
-    background: #2981bc;
+    /* background: #2981bc; */
+    background: #29bc30;
     color: white;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
     padding: 10px 15px;
-    border: 1px solid #0059b3;
+    border: 1px solid #189c1f;
     border-radius: 5px;
     margin-bottom: 50px;
     /* pointer-events: auto; */
 }
 
 #girar:hover{
-    background: #3a93cf; 
+    background: #3acf5f; 
 }
 
 
