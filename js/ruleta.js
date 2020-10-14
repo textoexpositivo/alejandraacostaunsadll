@@ -8,8 +8,8 @@ const scalaRuleta = 250;
 
 document.getElementById('intentos').innerHTML = `Intentos: ${intentos}`;
 
-document.getElementById('canvas').setAttribute('height', (scalaRuleta*2)+30);
-document.getElementById('canvas').setAttribute('width', (scalaRuleta*2)+30);
+document.getElementById('canvas').setAttribute('height', (scalaRuleta * 2) + 30);
+document.getElementById('canvas').setAttribute('width', (scalaRuleta * 2) + 30);
 // canvas 170*2 = scalaRuleta *2
 
 var modal = document.getElementById("modal");
@@ -19,18 +19,21 @@ var miRuleta = new Winwheel({
     'outerRadius': scalaRuleta,
     'textAlignment': 'outer',
     'textMargin': 50,
-    'textFontSize' : 30,
+    'textFontSize': 30,
+    'textOrientation': 'curved',
+    'textAligment': 'center',
+    'lineWidth': 2,
     'segments': [
-        { 'fillStyle': '#02f40f', 'text': '1' },
-        { 'fillStyle': '#f1f40f', 'text': '2' },
-        { 'fillStyle': '#f1b40f', 'text': '3' },
-        { 'fillStyle': '#f1e40f', 'text': '4' },
-        { 'fillStyle': '#f1c40f', 'text': '5' },
-        { 'fillStyle': '#f1f40f', 'text': '6' },
-        { 'fillStyle': '#f1b40f', 'text': '7' },
-        { 'fillStyle': '#f1e40f', 'text': '8' },
-        { 'fillStyle': '#f1c40f', 'text': '9' },
-        { 'fillStyle': '#f1f40f', 'text': '10' },
+        { 'fillStyle': '#ffa40f', 'text': '1' },
+        { 'fillStyle': '#ffff0f', 'text': '2' },
+        { 'fillStyle': '#ffc40f', 'text': '3' },
+        { 'fillStyle': '#fff40f', 'text': '4' },
+        { 'fillStyle': '#ffa40f', 'text': '5' },
+        { 'fillStyle': '#ffff0f', 'text': '6' },
+        { 'fillStyle': '#ffc40f', 'text': '7' },
+        { 'fillStyle': '#fff40f', 'text': '8' },
+        { 'fillStyle': '#ffa40f', 'text': '9' },
+        { 'fillStyle': '#ffff0f', 'text': '10' },
     ],
     'animation': {
         'type': 'spinToStop',
@@ -41,7 +44,24 @@ var miRuleta = new Winwheel({
 });
 
 
+const colorRuleta = ['#ffa40f', '#ffff0f', '#ffc40f', '#fff40f'];
 
+function changeColor() {
+    let b = 0;
+    for (let i = 1; i <= miRuleta.numSegments; i++) {
+        if (i == miRuleta.numSegments) {
+            miRuleta.segments[i].fillStyle = '#ffe40f';
+        } else {
+            miRuleta.segments[i].fillStyle = colorRuleta[b];
+        }
+
+        // b++
+        (b >= 3) ? b = 0 : b++;
+        // miRuleta.segments[i+1].fillStyle = '#aae56f';
+        // miRuleta.segments[i+2].fillStyle = '#cce56f';
+    }
+    miRuleta.draw();
+}
 
 
 function Mensaje() {
@@ -123,10 +143,10 @@ function Mensaje() {
         )
     } else if (selSeg.text == '10') {
         preguntas(selSeg.text,
-            'Si titularas cada párrafo del texto que opción elegirías',
+            '¿Si titularas cada párrafo del texto que opción elegirías?',
             'Hábitat del cocodrilo. El cocodrilo en los jeroglíficos. Amenaza a la orilla del Nilo. Vaticinio de muerte del hijo del rey. Horus se transforma en cocodrilo. Sobek, patrón de la realeza. Horus con cuerpo de cocodrilo, Tueris con cola de cocodrilo y Ammit con cabeza de cocodrilo.',
             'El cocodrilo en la cultura faraónica. Imagen de agresividad. Tópico literario. Historias sobre el cocodrilo. Divinidades toman forma del cocodrilo. Sobek, el dios cocodrilo. Híbridos de cocodrilo y otros animales.',
-            'Otra',
+            'Otra.',
             'B'
         )
     }
@@ -140,8 +160,10 @@ function Mensaje() {
     miRuleta.rotationAngle = 0;
 
     for (let i = 1; i <= miRuleta.numSegments; i++) {
+
         if (selSeg.text == miRuleta.segments[i].text) {
             miRuleta.deleteSegment(i);
+            // changeColor();
         }
     }
 }
@@ -149,13 +171,13 @@ function Mensaje() {
 
 
 function girar() {
-    
+
     document.getElementById('girar').setAttribute('style', 'pointer-events: none');
     if (intentos > 0) {
         miRuleta.startAnimation();
         intentos--;
         document.getElementById('intentos').innerHTML = `Intentos: ${intentos}`;
-    // } else {
+        // } else {
         // document.getElementById('girar').setAttribute('style', 'pointer-events: auto');
         // document.getElementById('girar').setAttribute('style', 'pointer-events: none');
         // alert('No quedan más intentos');
@@ -174,13 +196,22 @@ function btn(index) {
     }
     document.getElementById('modal').setAttribute('style', 'opacity: 0; pointer-events: none;');
     document.getElementById('girar').setAttribute('style', 'pointer-events: auto');
-    miRuleta.draw();
+
+    // console.log(miRuleta.numSegments);
+
+
+    changeColor();
+
+    // miRuleta.draw();
+
+
     dibujarIndicador();
     if (intentos <= 0) {
         resultadoTotal(puntos, arrResp);
         document.getElementById('resultado').setAttribute('style', 'opacity: 1; pointer-events: auto;')
         document.getElementById('intentos').innerHTML = `Puntaje: ${puntos}`;
     }
+
 }
 
 
@@ -206,10 +237,10 @@ function dibujarIndicador() {
     ctx.lineTo(170, 50); //point inf_d scalaRuleta
     ctx.lineTo(170, 50); //point sup_d scalaRuleta
     */
-    ctx.moveTo((scalaRuleta-30), 0); //point sup_i scalaRuleta -30
-    ctx.lineTo((scalaRuleta+60), 0); //point inf_i scalaRuleta +30
-    ctx.lineTo(scalaRuleta+15, 50); //point inf_d scalaRuleta
-    ctx.lineTo(scalaRuleta+15, 50); //point sup_d scalaRuleta
+    ctx.moveTo((scalaRuleta - 30), 0); //point sup_i scalaRuleta -30
+    ctx.lineTo((scalaRuleta + 60), 0); //point inf_i scalaRuleta +30
+    ctx.lineTo(scalaRuleta + 15, 50); //point inf_d scalaRuleta
+    ctx.lineTo(scalaRuleta + 15, 50); //point sup_d scalaRuleta
     ctx.stroke();
     ctx.fill();
 }
