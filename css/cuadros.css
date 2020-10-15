@@ -1,31 +1,29 @@
 .cuadroInput{
     position: absolute;
     left: 780px;
-    /* background: rgba(65, 113, 156, 80); */
+    color: white;
     border-style:solid;
     border-color: rgba(65, 113, 156, 100);
-    /* box-shadow: inset 0px 0px 0px 0px red; */
-    /* border-radius: 3px, solid #b3b3b3; */
     background: rgba(101, 150, 200, 100);
 }
 
 .cuadroBox{
+    color: white;
     resize: none;
     position: absolute;
     text-align: center;
-
     border-color: rgba(65, 113, 156, 100);
-    /* background: #00000000; */
     background: rgba(101, 150, 200, 100);
 }
 
+td{
+    padding: 0;
+}
 
 .cuadroTabla{
     resize: none;
-    /* position: absolute; */
     text-align: center;
-
+    color: white;
     border-color: rgba(65, 113, 156, 100);
-    /* background: #00000000; */
     background: rgba(101, 150, 200, 100);
 }
