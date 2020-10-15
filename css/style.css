@@ -41,19 +41,18 @@ body {
 .presentacion{
     width: 80%;
     margin: auto;
-    text-indent: 4rem;
+    /* text-indent: 4rem; */
     font-size: 1.4rem;
     line-height : 2.4rem;
     text-align: justify;
     color: white;
 }
 
-.bienvenido{
+/* .bienvenido{
     text-align: center;
     font-size: 3rem;
     color: white;
-    /* color: red; */
-}
+} */
 
 iframe{
     display: flex;
