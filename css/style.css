@@ -74,5 +74,6 @@ iframe{
 
 .draggable.dragging {
     opacity: .5;
+    /* transform: scale(1.5); */
 }
 

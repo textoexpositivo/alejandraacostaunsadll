@@ -3,8 +3,10 @@
     left: 780px;
     color: white;
     border-style:solid;
-    border-color: rgba(65, 113, 156, 100);
-    background: rgba(101, 150, 200, 100);
+    border-color: var(--color1);
+    background: var(--color2);
+    transform: translateX(-380%);
+    /* transform: translateX(-345%); */
 }
 
 .cuadroBox{
@@ -12,8 +14,10 @@
     resize: none;
     position: absolute;
     text-align: center;
-    border-color: rgba(65, 113, 156, 100);
-    background: rgba(101, 150, 200, 100);
+    border-color: var(--color1);
+    background: var(--color2);
+    transform: translateX(-470%);
+    /* transform: translateX(-425%); */
 }
 
 td{
@@ -24,6 +28,16 @@ td{
     resize: none;
     text-align: center;
     color: white;
-    border-color: rgba(65, 113, 156, 100);
-    background: rgba(101, 150, 200, 100);
+
+    border-color: var(--color1);
+    background: var(--color2);
+}
+
+/* 41719c */
+/* 6596c8 */
+
+:root{
+    --color1: #41719c;
+    --color2: #6596c8;
+
 }

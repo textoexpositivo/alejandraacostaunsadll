@@ -87,7 +87,7 @@ function Mensaje() {
         )
     } else if (selSeg.text == '3') {
         preguntas(selSeg.text,
-            'En el texto “A la Carta” ¿cómo se crearía la comida con la tecnología?',
+            'En el texto “A la Carta” ¿Cómo se crearía la comida con la tecnología?',
             'A través de imágenes de los alimentos.',
             'Con una impresora 3D creando comida con microestructuras.',
             'Con cartuchos en polvo.',
@@ -103,7 +103,7 @@ function Mensaje() {
         )
     } else if (selSeg.text == '5') {
         preguntas(selSeg.text,
-            'En el texto “Al límite” por el calentamiento global qué se perdería en mayor cantidad.',
+            'En el texto “Al límite” ¿Por el calentamiento global qué se perdería en mayor cantidad?',
             'Plantas.',
             'Vertebrados.',
             'Insectos.',
@@ -119,7 +119,7 @@ function Mensaje() {
         )
     } else if (selSeg.text == '7') {
         preguntas(selSeg.text,
-            'En el texto “Cocodrilos en Egipto: temidos y venerados”¿qué datos aporta el paratexto?',
+            'En el texto “Cocodrilos en Egipto: temidos y venerados” ¿Qué datos aporta el paratexto?',
             'El hábitat y consideración del cocodrilo para los egipcios.',
             'Composición biológica del cocodrilo.',
             'Veneración al cocodrilo.',
@@ -135,7 +135,7 @@ function Mensaje() {
         )
     } else if (selSeg.text == '9') {
         preguntas(selSeg.text,
-            '¿Cómo clasificaría el siguiente fragmento? “ Dentro de la poblada fauna del Nilo, el cocodrilo ha sido siempre una de las presencias más características e inquietantes. Con hasta seis metros de longitud, su poderosa mandíbula y su escudo de escamas, representaba una amenaza constante y angustiosa para los antiguos egipcios… No es extraño por ello que este temible animal ocupara un lugar destacado en la cultura faraónica”',
+            '¿Cómo clasificaría el siguiente fragmento? “Dentro de la poblada fauna del Nilo, el cocodrilo ha sido siempre una de las presencias más características e inquietantes. Con hasta seis metros de longitud, su poderosa mandíbula y su escudo de escamas, representaba una amenaza constante y angustiosa para los antiguos egipcios… No es extraño por ello que este temible animal ocupara un lugar destacado en la cultura faraónica”',
             'Argumento.',
             'Definición.',
             'Ejemplo.',
@@ -143,7 +143,7 @@ function Mensaje() {
         )
     } else if (selSeg.text == '10') {
         preguntas(selSeg.text,
-            '¿Si titularas cada párrafo del texto que opción elegirías?',
+            '¿Si titularas cada párrafo del texto “Cocodrilos en Egipto: temidos y venerados” ¿qué opción elegirías?',
             'Hábitat del cocodrilo. El cocodrilo en los jeroglíficos. Amenaza a la orilla del Nilo. Vaticinio de muerte del hijo del rey. Horus se transforma en cocodrilo. Sobek, patrón de la realeza. Horus con cuerpo de cocodrilo, Tueris con cola de cocodrilo y Ammit con cabeza de cocodrilo.',
             'El cocodrilo en la cultura faraónica. Imagen de agresividad. Tópico literario. Historias sobre el cocodrilo. Divinidades toman forma del cocodrilo. Sobek, el dios cocodrilo. Híbridos de cocodrilo y otros animales.',
             'Otra.',

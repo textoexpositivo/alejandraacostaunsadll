@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/ruleta.css">
     <link rel="stylesheet" href="css/cuadros.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <script src="TweenMax.min.js"></script>
     <script src="Winwheel.min.js"></script>
@@ -19,14 +19,16 @@
 
 
     <!-- TITULO -->
-    <div>
+    <div style="position: relative;">
+        <img src="img/unsa.jpg" alt="" style="position: absolute; left: 0px; top:-80px; transform: scale(0.4);">
+        <img src="img/didactica.png" alt="" style="position: absolute; right: 0px; top:-2px; transform: scale(0.5);">
         <h1 style="
             margin: 0;
             background-color: rgb(98, 93, 112);
             color: thistle;
             text-align: center;
             vertical-align: center;
-            font-size: 120px;
+            font-size: 100px;
             ">
             Texto expositivo
         </h1>
@@ -204,7 +206,7 @@
 
 
     <div class="container" style="background-color: #272727;">
-        <h1 style="text-align: center; color: white; background-color: #d83636;">Recortes</h1>
+        <h1 style="text-align: center; color: white; background-color: #d83636;">Elementos</h1>
         <img src="img/recorte05.jpg" alt="" class="draggable" draggable="true">
         <img src="img/recorte01.jpg" alt="" class="draggable" draggable="true">
         <img src="img/recorte07.png" alt="" class="draggable" draggable="true">
@@ -262,76 +264,202 @@
         <img src="img/cuadros.svg" alt="" style="display: block; margin: auto;">
 
         <!-- inputs -->
-        <input type="text" class="cuadroInput" style="top:30px;">
-        <input type="text" class="cuadroInput" style="top:55px;">
-        <input type="text" class="cuadroInput" style="top:80px;">
-        <input type="text" class="cuadroInput" style="top:105px;">
-        <input type="text" class="cuadroInput" style="top:130px;">
-        <input type="text" class="cuadroInput" style="top:155px;">
-        <input type="text" class="cuadroInput" style="top:180px;">
+        <div  style="position: absolute; left: 50%; top: 0px;">
+            <!-- <div style="transform: translateX(-50%);"> -->
 
-        <input type="text" class="cuadroInput" style="top:220px;">
-        <input type="text" class="cuadroInput" style="top:245px;">
+                <input type="text" class="cuadroInput" style="top:30px;">
+                <input type="text" class="cuadroInput" style="top:55px;">
+                <input type="text" class="cuadroInput" style="top:80px;">
+                <input type="text" class="cuadroInput" style="top:105px;">
+                <input type="text" class="cuadroInput" style="top:130px;">
+                <input type="text" class="cuadroInput" style="top:155px;">
+                <input type="text" class="cuadroInput" style="top:180px;">
+        
+                <input type="text" class="cuadroInput" style="top:220px;">
+                <input type="text" class="cuadroInput" style="top:245px;">
+        
+        
+                <!-- BOX -->
+                <textarea cols="15" rows="4" class="cuadroBox" style="left: 227px; top:146px;"></textarea>
+                <textarea cols="15" rows="4" class="cuadroBox" style="left: 500px; top:82px;"></textarea>
+                <textarea cols="15" rows="4" class="cuadroBox" style="left: 500px; top:212px;"></textarea>
+        
+        
+                <!-- BOX 2 -->
+                <textarea cols="15" rows="4" class="cuadroBox" style="left: 223px; top:432px;"></textarea>
+                <textarea cols="15" rows="4" class="cuadroBox" style="left: 430px; top:432px;"></textarea>
+                <textarea cols="15" rows="4" class="cuadroBox" style="left: 637px; top:432px;"></textarea>
+                <textarea cols="15" rows="4" class="cuadroBox" style="left: 844px; top:432px;"></textarea>
+            <!-- </div> -->
 
-
-        <!-- BOX -->
-        <textarea cols="15" rows="4" class="cuadroBox" style="left: 227px; top:146px;"></textarea>
-        <textarea cols="15" rows="4" class="cuadroBox" style="left: 500px; top:82px;"></textarea>
-        <textarea cols="15" rows="4" class="cuadroBox" style="left: 500px; top:212px;"></textarea>
-
-
-        <!-- BOX 2 -->
-        <textarea cols="15" rows="4" class="cuadroBox" style="left: 223px; top:432px;"></textarea>
-        <textarea cols="15" rows="4" class="cuadroBox" style="left: 430px; top:432px;"></textarea>
-        <textarea cols="15" rows="4" class="cuadroBox" style="left: 637px; top:432px;"></textarea>
-        <textarea cols="15" rows="4" class="cuadroBox" style="left: 844px; top:432px;"></textarea>
+        </div>
 
         <!-- BOX 3 -->
-        <table style="position: absolute; left: 345px; top: 650px;">
-            <tr  >
+        <!-- <table style="position: absolute; left: 345px; top: 650px;"> -->
+        <table style="position: absolute; left: 50%; top: 650px;">
+            <!-- <table> -->
+            <tr style="transform: translateX(-50%);">
                 <td style="padding: 0.5rem;" class="cuadroTabla">Categorías</td>
                 <td class="cuadroTabla">Elemento A</td>
                 <td class="cuadroTabla">Elemento B</td>
             </tr>
-            <tr>
+            <tr  style="transform: translateX(-50%);">
+                <td></td>
+                <td><textarea class="cuadroTabla" rows="5"></textarea></td>
+                <td><textarea class="cuadroTabla" rows="5"></textarea></td>
+            </tr>
+            <tr  style="transform: translateX(-50%);">
                 <td><textarea class="cuadroTabla" rows="5"></textarea></td>
                 <td><textarea class="cuadroTabla" rows="5"></textarea></td>
                 <td><textarea class="cuadroTabla" rows="5"></textarea></td>
             </tr>
-            <tr>
+            <tr  style="transform: translateX(-50%);">
                 <td><textarea class="cuadroTabla" rows="5"></textarea></td>
                 <td><textarea class="cuadroTabla" rows="5"></textarea></td>
                 <td><textarea class="cuadroTabla" rows="5"></textarea></td>
             </tr>
-            <tr>
-                <td><textarea class="cuadroTabla" rows="5"></textarea></td>
-                <td><textarea class="cuadroTabla" rows="5"></textarea></td>
-                <td><textarea class="cuadroTabla" rows="5"></textarea></td>
-            </tr>
-            <tr>
+            <tr  style="transform: translateX(-50%);">
                 <td><textarea class="cuadroTabla" rows="5"></textarea></td>
                 <td><textarea class="cuadroTabla" rows="5"></textarea></td>
                 <td><textarea class="cuadroTabla" rows="5"></textarea></td>
             </tr>
         </table>
 
-        <!-- <textarea cols="18" rows="5" class="cuadroBox" style="left: 362px; top:646px;"></textarea>
-        <textarea cols="18" rows="5" class="cuadroBox" style="left: 362px; top:736px;"></textarea>
-        <textarea cols="18" rows="5" class="cuadroBox" style="left: 362px; top:826px;"></textarea>
-        <textarea cols="18" rows="5" class="cuadroBox" style="left: 362px; top:916px;"></textarea>
 
-        <textarea cols="18" rows="5" class="cuadroBox" style="left: 523px; top:646px;"></textarea>
-        <textarea cols="18" rows="5" class="cuadroBox" style="left: 523px; top:736px;"></textarea>
-        <textarea cols="18" rows="5" class="cuadroBox" style="left: 523px; top:826px;"></textarea>
-        <textarea cols="18" rows="5" class="cuadroBox" style="left: 523px; top:916px;"></textarea>
+        <table style="width: 80%; margin: auto;" >
+            <!-- las ballenas -->
+            <tr >
+                <td style="border: 1px solid white; padding: 1.5rem;" class="presentacion">
+                    <h3 style="text-align: center;" >La ballena</h3>
+                    <p style="text-indent: 4rem;">
+                        La ballena es el animal más grande que existe en la actualidad. Puede medir entre 25 y 30 metros de longitud,
+                        y pesar de 150 a 200 toneladas.
+                    </p>
+                    <p style="text-indent: 4rem;">
+                        Su cuerpo es estilizado y acaba en una gran aleta horizontal,
+                        dotada de una potente musculatura, que le permite alcanzar,
+                        en algunas especies, velocidades de 40 a 50 km/h, Las dos extremidades
+                        anteriores están transformadas en aletas y las posteriores hay desaparecido.
+                        También hay perdido el pelaje, el que se reduce en algunas cerdas, ubicadas
+                        en la cara.
+                    </p>
+                    <p style="text-indent: 4rem;">
+                        Su corazón es del tamaño y peso de un pequeño coche utilitario y su cuerpo
+                        está recubierto de una espesa capa de grasa que le permite mantener su
+                        temperatura corporal entre los 36 y 37 grados, incluso en aguas muy frías.
+                    </p>
+                    <p style="text-indent: 4rem;">
+                        Estos grandes mamíferos, al igual que todos toman el oxígeno del aire.
+                        Por ello poseen grandes pulmones y respiran gracias a los orificios nasales
+                        que tienen en la parte superior de la cabeza, los cuales cierran herméticamente
+                        cuando se sumergen, abriéndolos cuando vuelven a la superficie para respirar,
+                        produciendo el característico resoplar de las ballenas. Los cetáceos son
+                        mamíferos marinos que se encuentran en todos los océanos del mundo, desde las
+                        aguas heladas de los polos hasta las aguas cálidas de los trópicos, mientras
+                        otros habitan en estuarios y ríos.
+                    </p>
+                    <p style="text-align: end; font-size: 1rem;">
+                        [www.puertopiramides.gov.ar]
+                    </p>
 
-        <textarea cols="18" rows="5" class="cuadroBox" style="left: 684px; top:646px;"></textarea>
-        <textarea cols="18" rows="5" class="cuadroBox" style="left: 684px; top:736px;"></textarea>
-        <textarea cols="18" rows="5" class="cuadroBox" style="left: 684px; top:826px;"></textarea>
-        <textarea cols="18" rows="5" class="cuadroBox" style="left: 684px; top:916px;"></textarea> -->
+                </td>
+            </tr>
+            <!-- la caza de ballenas -->
+            <tr>
+                <td style="border: 1px solid white; padding: 1.5rem;" class="presentacion">
+                    <h3 style="text-align: center;" >La caza de ballenas en el tiempo</h3>
+                    <p style="text-indent: 4rem;">
+                        El mayor depredador de las ballenas es, sin duda, el hombre. Como con otras
+                        tantas especies, no hemos sabido parar a tiempo y hemos llegado a extinguirlas
+                        casi por completo.
+                    </p>
+                    <p style="text-indent: 4rem;">
+                        Gracias a muchos científicos y a otras asociaciones desinteresadas, las medidas
+                        de protección adoptadas por la Comisión Ballenera Internacional (de la que
+                        forman parte más de 50 países balleneros) permiten el mantenimiento e incluso
+                        el desarrollo de ciertas poblaciones de rorcuales.
+                    </p>
+                    <p style="text-indent: 4rem;">
+                        Su propósito no es tanto el proteger a las ballenas, sino asegurar el futuro
+                        negocio a largo plazo, pero este es un primer paso en la conservación del animal.
+                    </p>
+                    <p style="text-indent: 4rem;">
+                        A partir de un acuerdo hecho <b>hace ya años,</b> las capturas fueron disminuyendo,
+                        más que por las leyes, por la desaparición de estos animales. Solo en <b>1960</b> se
+                        mataron más de 60.000 ejemplares.
+                    </p>
+                    <p style="text-indent: 4rem;">
+                        Quizás la suerte de las ballenas esté en la industria química, que va
+                        sintetizando los productos que, hasta ahora, se elaboraban a partir de las
+                        ballenas.
+                    </p>
+                    <p style="text-indent: 4rem;">
+                        Otro de los factores que colaboraron en esta conservación fue que en <b>1975</b>,
+                        la propia C.B.I., presionada por las cada vez más numerosas asociaciones
+                        mundiales de carácter ecológico, dejó de ser un club de balleneros para
+                        pasar a ser una genuina asociación ecologista.
+                    </p>
+                    <p style="text-indent: 4rem;">
+                        No fue hasta <b>1986</b> en que la propia C.B.I. aprobó la prohibición internacional
+                        de comercializar los productos derivados de estos animales. Por desgracia,
+                        no todos los países aceptaron esta decisión, Noruega, Islandia, Corea y Japón
+                        han ido poniendo excusas con el fin de seguir matando ballenas. Noruega y
+                        Japón matan de 600 a 650 ballenas cada año “con fines científicos”.
+                    </p>
+                    <p style="text-align: end; font-size: 1rem;">[www.puertopiramides.gov.ar]</p>
+                </td>
+            </tr>
+            <!-- iguales pero diferentes -->
+            <tr>
+                <td style="border: 1px solid white; padding: 1.5rem;" class="presentacion">
+                    <h3 style="text-align: center;" >Iguales pero diferentes</h3>
+                    <p style="text-indent: 4rem;">
+                        Como te podés imaginar, dada la enorme cantidad de seres vivos que existen,
+                        el modo en que cada uno lleva a cabo sus “actividades” es muy diverso.
+                    </p>
+                    <p style="text-indent: 4rem;">
+                        Si comparás todos los seres vivos que conocés, descubrirás muchas
+                        diferencias entre ellos. Por ejemplo, podemos comparar las plantas y los
+                        hongos. Es sabido que las plantas son <b>autótrofas</b> porque elaboran sus propios
+                        nutrientes en el proceso de fotosíntesis. En cambio, los hongos son
+                        <b>heterótrofos</b>, pues incorporan sustancias provenientes del alimento ya
+                        elaborado por otros organismos. ¿Qué otra diferencia? La forma de reproducción.
+                        La mayoría de los seres vivos producen descendencia, a partir de la <b>reproducción sexual</b>,
+                        como es el caso de las plantas con flores. En ellas intervienen dos
+                        <b>gametas</b> (células sexuales) que se fusionan durante la <b>fecundación</b>. Pero
+                        también hay otros seres vivos, como las amebas, cuya reproducción es <b>asexual</b>,
+                        o sea que el nuevo individuo se desarrolla a partir de un único progenitor.
+                    </p>
+                    <p style="text-indent: 4rem;">
+                        Sin embargo, sea como fuere y sin excepción, todos los seres vivos cumplen
+                        con determinadas <b>funciones vitales</b> relacionadas entre sí:
+                    </p>
+                    <p style="text-indent: 4rem;">
+                        · <b>Nutrición:</b> permite obtener la materia y la energía necesarias para vivir.
+                        Esto incluye: la alimentación (en el caso de los organismos autótrofos, la
+                        fotosíntesis), la respiración, la circulación y la excreción.
+                    </p>
+                    <p style="text-indent: 4rem;">
+                        · <b>Relación:</b> esta función incluye todos los mecanismos por medio de los cuales
+                        los seres vivos establecen vínculos, tanto con los elementos físicos del
+                        ambiente donde habitan como con los otros seres vivos que comparten ese lugar.
+                        ¿Y cómo se establecen esos vínculos? A través de la percepción de estímulos
+                        provenientes del medio externo (luz, temperatura, sonidos, etc.) y de las
+                        respuestas a esos estímulos, por ejemplo, moviéndose.
+                    </p>
+                    <p style="text-indent: 4rem;">
+                        · <b>Reproducción:</b> gracias a esta función, los organismos generan descendientes
+                        semejantes a ellos mismos y así perpetúan la especie.
+                    </p>
+                    <p style="text-align: end; font-size: 1rem;">[E. Cynowiec et alt. (2006) Ciencias Naturales 7,</br>
+                        Buenos Aires: Santillana, p.143]</p>
+                </td>
+            </tr>
+        </table>
 
 
     </div>
+
 
     <!-- ROMPECABEZAS -->
     <div class="r1">
