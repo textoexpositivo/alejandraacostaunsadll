@@ -10,15 +10,28 @@
 }
 
 .cuadroBox{
+    /* position: fixed; */
     color: white;
     resize: none;
-    position: absolute;
     text-align: center;
     border-color: var(--color1);
     background: var(--color2);
-    transform: translateX(-470%);
+    /* margin-left: 50%; */
+    /* transform: translateX(-470%); */
     /* transform: translateX(-425%); */
 }
+
+/* @media only screen and (min-device-width : 1200px) {
+    .cuadroBox{
+        transform: translateX(-470%);
+    }
+}
+
+@media only screen and (max-device-width : 1200px) {
+    .cuadroBox{
+        transform: translateX(-505%);
+    }
+} */
 
 td{
     padding: 0;
@@ -32,9 +45,19 @@ td{
     text-align: center;
     color: white;
     margin: 0;
-    /* height: 94.4px; */
+
     border-color: var(--color1);
     background: var(--color2);
+}
+
+.cuadroTablaE{
+    resize: none;
+    text-align: center;
+    color: white;
+    margin: 0;
+
+    border-color: var(--color1);
+    background: linear-gradient(27deg, var(--color2) 50%, var(--color1) 51%, var(--color2) 52%)
 }
 
 .tableStyle{

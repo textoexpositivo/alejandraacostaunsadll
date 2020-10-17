@@ -14,6 +14,7 @@ document.getElementById('canvas').setAttribute('width', (scalaRuleta * 2) + 30);
 
 var modal = document.getElementById("modal");
 
+const colorRuleta = ['#2aff10', '#ffff0f', '#ffa40f'];
 var miRuleta = new Winwheel({
     'numSegments': 10,
     'outerRadius': scalaRuleta,
@@ -24,16 +25,16 @@ var miRuleta = new Winwheel({
     'textAligment': 'center',
     'lineWidth': 2,
     'segments': [
-        { 'fillStyle': '#ffa40f', 'text': '1' },
-        { 'fillStyle': '#ffff0f', 'text': '2' },
-        { 'fillStyle': '#ffc40f', 'text': '3' },
-        { 'fillStyle': '#fff40f', 'text': '4' },
-        { 'fillStyle': '#ffa40f', 'text': '5' },
-        { 'fillStyle': '#ffff0f', 'text': '6' },
-        { 'fillStyle': '#ffc40f', 'text': '7' },
-        { 'fillStyle': '#fff40f', 'text': '8' },
-        { 'fillStyle': '#ffa40f', 'text': '9' },
-        { 'fillStyle': '#ffff0f', 'text': '10' },
+        { 'fillStyle': colorRuleta[0], 'text': '1' },
+        { 'fillStyle': colorRuleta[1], 'text': '2' },
+        { 'fillStyle': colorRuleta[2], 'text': '3' },
+        { 'fillStyle': colorRuleta[1], 'text': '4' },
+        { 'fillStyle': colorRuleta[2], 'text': '5' },
+        { 'fillStyle': colorRuleta[1], 'text': '6' },
+        { 'fillStyle': colorRuleta[2], 'text': '7' },
+        { 'fillStyle': colorRuleta[1], 'text': '8' },
+        { 'fillStyle': colorRuleta[2], 'text': '9' },
+        { 'fillStyle': colorRuleta[1], 'text': '10' },
     ],
     'animation': {
         'type': 'spinToStop',
@@ -44,25 +45,37 @@ var miRuleta = new Winwheel({
 });
 
 
-const colorRuleta = ['#ffa40f', '#ffff0f', '#ffc40f', '#fff40f'];
+// const colorRuleta = ['#ffa40f', '#ffff0f', '#ffc40f', '#fff40f'];
+
+// function changeColor() {
+//     let b = 0;
+//     for (let i = 1; i <= miRuleta.numSegments; i++) {
+//         if (i == miRuleta.numSegments) {
+//             miRuleta.segments[i].fillStyle = '#ffe40f';
+//         } else {
+//             miRuleta.segments[i].fillStyle = colorRuleta[b];
+//         }
+//         (b >= 3) ? b = 0 : b++;
+//     }
+//     miRuleta.draw();
+// }
+
+// const colorRuleta = ['#ffa40f', '#ffff0f', '#ffc40f', '#fff40f'];
 
 function changeColor() {
-    let b = 0;
     for (let i = 1; i <= miRuleta.numSegments; i++) {
-        if (i == miRuleta.numSegments) {
-            miRuleta.segments[i].fillStyle = '#ffe40f';
+        if (i % 2 == 0){
+            miRuleta.segments[i].fillStyle = colorRuleta[1];
         } else {
-            miRuleta.segments[i].fillStyle = colorRuleta[b];
+            if(i == 1){
+                miRuleta.segments[i].fillStyle= colorRuleta[0];
+            }else{
+                miRuleta.segments[i].fillStyle = colorRuleta[2];
+            }
         }
-
-        // b++
-        (b >= 3) ? b = 0 : b++;
-        // miRuleta.segments[i+1].fillStyle = '#aae56f';
-        // miRuleta.segments[i+2].fillStyle = '#cce56f';
     }
     miRuleta.draw();
 }
-
 
 function Mensaje() {
 
