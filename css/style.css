@@ -12,6 +12,8 @@
 }
 
 
+
+
 body {
     /* width: 100%; */
     margin: 0;
@@ -64,6 +66,7 @@ iframe{
 /* DRAG 2 */
 .container {
     background-color: rgba(172, 39, 39, 0);
+    position: absolute;
 }
 
 
