@@ -67,6 +67,19 @@ td{
     border-spacing: 0px;
 }
 
+.tableStyle2{
+    border-collapse: separate;
+    border-spacing: 0px;
+    margin: auto;
+    transform: translateY(-775px);
+    border-spacing: 80px;
+    /* display: block; */
+    /* position: absolute; */
+    /* top: 350px; */
+    /* justify-content: center; */
+}
+
+
 /* 41719c */
 /* 6596c8 */
 
