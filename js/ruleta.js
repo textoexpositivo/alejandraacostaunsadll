@@ -14,7 +14,7 @@ document.getElementById('canvas').setAttribute('width', (scalaRuleta * 2) + 30);
 
 var modal = document.getElementById("modal");
 
-const colorRuleta = ['#2aff10', '#ffff0f', '#ffa40f'];
+const colorRuleta = ['#2aff10', '#ffff0f', '#ffb400'];
 var miRuleta = new Winwheel({
     'numSegments': 10,
     'outerRadius': scalaRuleta,
@@ -43,8 +43,8 @@ var miRuleta = new Winwheel({
         'callbackAfter': 'dibujarIndicador()'
     }
 });
-
-
+miRuleta.rotationAngle = -18;
+miRuleta.draw();
 // const colorRuleta = ['#ffa40f', '#ffff0f', '#ffc40f', '#fff40f'];
 
 // function changeColor() {
@@ -74,6 +74,8 @@ function changeColor() {
             }
         }
     }
+    // console.log(miRuleta.numSegments);
+    miRuleta.rotationAngle = (360/ miRuleta.numSegments)/-2;
     miRuleta.draw();
 }
 
@@ -168,10 +170,9 @@ function Mensaje() {
         document.getElementById('modal').setAttribute('style', 'opacity: 1; pointer-events: auto;');
     }, 500);
 
-
     miRuleta.stopAnimation(false);
-    miRuleta.rotationAngle = 0;
-
+    // miRuleta.rotationAngle = -20;
+    // console.log(miRuleta.numSegments);
     for (let i = 1; i <= miRuleta.numSegments; i++) {
 
         if (selSeg.text == miRuleta.segments[i].text) {
