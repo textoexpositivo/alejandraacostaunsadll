@@ -22,15 +22,24 @@
 
 td{
     padding: 0;
+    margin: 0;
 }
+
+
 
 .cuadroTabla{
     resize: none;
     text-align: center;
     color: white;
-
+    margin: 0;
+    /* height: 94.4px; */
     border-color: var(--color1);
     background: var(--color2);
+}
+
+.tableStyle{
+    border-collapse: separate;
+    border-spacing: 0px;
 }
 
 /* 41719c */
