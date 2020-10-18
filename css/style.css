@@ -18,7 +18,8 @@ body {
     /* width: 100%; */
     margin: 0;
     padding: 0;
-    background-color: #494f66;
+    /* background-color: #494f66; */
+    background-color: #523c4c;
     /* width: 1200px; */
     /* width: 100%; */
 }
@@ -27,7 +28,8 @@ body {
     text-align: center;
     align-content: center;
     justify-self: center;
-    background: #3967b1;
+    /* background: #3967b1; */
+    background: #ffb8b8;
     color: white;
 }
 
