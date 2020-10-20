@@ -14,7 +14,10 @@ document.getElementById('canvas').setAttribute('width', (scalaRuleta * 2) + 30);
 
 var modal = document.getElementById("modal");
 
-const colorRuleta = ['#2aff10', '#ffff0f', '#ffb400'];
+// const colorRuleta = ['#2aff10', '#ffff0f', '#ffb400'];
+const colorRuleta = [' #FFEA35','#FABB54','#ff8833'];
+const colorLinea = '#AD8044'
+
 var miRuleta = new Winwheel({
     'numSegments': 10,
     'outerRadius': scalaRuleta,
@@ -23,18 +26,18 @@ var miRuleta = new Winwheel({
     'textFontSize': 30,
     'textOrientation': 'curved',
     'textAligment': 'center',
-    'lineWidth': 2,
+    'lineWidth': 5,
     'segments': [
-        { 'fillStyle': colorRuleta[0], 'text': '1' },
-        { 'fillStyle': colorRuleta[1], 'text': '2' },
-        { 'fillStyle': colorRuleta[2], 'text': '3' },
-        { 'fillStyle': colorRuleta[1], 'text': '4' },
-        { 'fillStyle': colorRuleta[2], 'text': '5' },
-        { 'fillStyle': colorRuleta[1], 'text': '6' },
-        { 'fillStyle': colorRuleta[2], 'text': '7' },
-        { 'fillStyle': colorRuleta[1], 'text': '8' },
-        { 'fillStyle': colorRuleta[2], 'text': '9' },
-        { 'fillStyle': colorRuleta[1], 'text': '10' },
+        { 'strokeStyle' : colorLinea , 'fillStyle': colorRuleta[0], 'text': '1' },
+        { 'strokeStyle' : colorLinea , 'fillStyle': colorRuleta[1], 'text': '2' },
+        { 'strokeStyle' : colorLinea , 'fillStyle': colorRuleta[2], 'text': '3' },
+        { 'strokeStyle' : colorLinea , 'fillStyle': colorRuleta[1], 'text': '4' },
+        { 'strokeStyle' : colorLinea , 'fillStyle': colorRuleta[2], 'text': '5' },
+        { 'strokeStyle' : colorLinea , 'fillStyle': colorRuleta[1], 'text': '6' },
+        { 'strokeStyle' : colorLinea , 'fillStyle': colorRuleta[2], 'text': '7' },
+        { 'strokeStyle' : colorLinea , 'fillStyle': colorRuleta[1], 'text': '8' },
+        { 'strokeStyle' : colorLinea , 'fillStyle': colorRuleta[2], 'text': '9' },
+        { 'strokeStyle' : colorLinea , 'fillStyle': colorRuleta[1], 'text': '10' },
     ],
     'animation': {
         'type': 'spinToStop',
@@ -190,7 +193,9 @@ function girar() {
     if (intentos > 0) {
         miRuleta.startAnimation();
         intentos--;
-        document.getElementById('intentos').innerHTML = `Intentos: ${intentos}`;
+        setTimeout(() => {
+            document.getElementById('intentos').innerHTML = `Intentos: ${intentos}`;
+        }, 500);
         // } else {
         // document.getElementById('girar').setAttribute('style', 'pointer-events: auto');
         // document.getElementById('girar').setAttribute('style', 'pointer-events: none');
