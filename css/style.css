@@ -11,7 +11,17 @@
     }
 }
 
+.banner{
+    margin: 0;
+    
+    text-shadow: 3px 3px 5px #666666;
+    color: #ffb8b8;
+    text-align: center;
+    vertical-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 900;
 
+}
 
 body {
     /* width: 100%; */
